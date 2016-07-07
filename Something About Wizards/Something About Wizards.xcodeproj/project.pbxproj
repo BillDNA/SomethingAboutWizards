@@ -17,6 +17,7 @@
 		A2DB0A3C1D2DEA3500886B96 /* Something_About_WizardsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB0A3B1D2DEA3500886B96 /* Something_About_WizardsUITests.m */; };
 		A2DB0A581D2DEE4F00886B96 /* UIColor+SAW.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB0A571D2DEE4F00886B96 /* UIColor+SAW.m */; };
 		A2DB0A5D1D2DEF3E00886B96 /* SAWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB0A5C1D2DEF3E00886B96 /* SAWBaseViewController.m */; };
+		A2DB0A611D2DF41100886B96 /* SAWMaseterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB0A601D2DF41100886B96 /* SAWMaseterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		A2DB0A571D2DEE4F00886B96 /* UIColor+SAW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SAW.m"; sourceTree = "<group>"; };
 		A2DB0A5B1D2DEF3E00886B96 /* SAWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWBaseViewController.h; sourceTree = "<group>"; };
 		A2DB0A5C1D2DEF3E00886B96 /* SAWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWBaseViewController.m; sourceTree = "<group>"; };
+		A2DB0A5F1D2DF41100886B96 /* SAWMaseterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWMaseterViewController.h; sourceTree = "<group>"; };
+		A2DB0A601D2DF41100886B96 /* SAWMaseterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWMaseterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +204,8 @@
 		A2DB0A591D2DEEF200886B96 /* SAWMasterViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A2DB0A5F1D2DF41100886B96 /* SAWMaseterViewController.h */,
+				A2DB0A601D2DF41100886B96 /* SAWMaseterViewController.m */,
 			);
 			name = SAWMasterViewController;
 			sourceTree = "<group>";
@@ -347,6 +352,7 @@
 			files = (
 				A2DB0A1E1D2DEA3400886B96 /* ViewController.m in Sources */,
 				A2DB0A1B1D2DEA3400886B96 /* AppDelegate.m in Sources */,
+				A2DB0A611D2DF41100886B96 /* SAWMaseterViewController.m in Sources */,
 				A2DB0A5D1D2DEF3E00886B96 /* SAWBaseViewController.m in Sources */,
 				A2DB0A181D2DEA3400886B96 /* main.m in Sources */,
 				A2DB0A581D2DEE4F00886B96 /* UIColor+SAW.m in Sources */,
