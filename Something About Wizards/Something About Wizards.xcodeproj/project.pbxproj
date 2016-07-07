@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2DB0A181D2DEA3400886B96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB0A171D2DEA3400886B96 /* main.m */; };
+		A2DB0A1B1D2DEA3400886B96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB0A1A1D2DEA3400886B96 /* AppDelegate.m */; };
+		A2DB0A1E1D2DEA3400886B96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB0A1D1D2DEA3400886B96 /* ViewController.m */; };
+		A2DB0A211D2DEA3400886B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DB0A1F1D2DEA3400886B96 /* Main.storyboard */; };
+		A2DB0A231D2DEA3400886B96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2DB0A221D2DEA3400886B96 /* Assets.xcassets */; };
+		A2DB0A261D2DEA3400886B96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DB0A241D2DEA3400886B96 /* LaunchScreen.storyboard */; };
+		A2DB0A311D2DEA3400886B96 /* Something_About_WizardsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB0A301D2DEA3400886B96 /* Something_About_WizardsTests.m */; };
+		A2DB0A3C1D2DEA3500886B96 /* Something_About_WizardsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB0A3B1D2DEA3500886B96 /* Something_About_WizardsUITests.m */; };
+		A2DB0A581D2DEE4F00886B96 /* UIColor+SAW.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB0A571D2DEE4F00886B96 /* UIColor+SAW.m */; };
+		A2DB0A5D1D2DEF3E00886B96 /* SAWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB0A5C1D2DEF3E00886B96 /* SAWBaseViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2DB0A2D1D2DEA3400886B96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2DB0A0B1D2DEA3400886B96 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2DB0A121D2DEA3400886B96;
+			remoteInfo = "Something About Wizards";
+		};
+		A2DB0A381D2DEA3500886B96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2DB0A0B1D2DEA3400886B96 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2DB0A121D2DEA3400886B96;
+			remoteInfo = "Something About Wizards";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A2DB0A131D2DEA3400886B96 /* Something About Wizards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Something About Wizards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2DB0A171D2DEA3400886B96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A2DB0A191D2DEA3400886B96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A2DB0A1A1D2DEA3400886B96 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A2DB0A1C1D2DEA3400886B96 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A2DB0A1D1D2DEA3400886B96 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A2DB0A201D2DEA3400886B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A2DB0A221D2DEA3400886B96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2DB0A251D2DEA3400886B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A2DB0A271D2DEA3400886B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2DB0A2C1D2DEA3400886B96 /* Something About WizardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Something About WizardsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2DB0A301D2DEA3400886B96 /* Something_About_WizardsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Something_About_WizardsTests.m; sourceTree = "<group>"; };
+		A2DB0A321D2DEA3500886B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2DB0A371D2DEA3500886B96 /* Something About WizardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Something About WizardsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2DB0A3B1D2DEA3500886B96 /* Something_About_WizardsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Something_About_WizardsUITests.m; sourceTree = "<group>"; };
+		A2DB0A3D1D2DEA3500886B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2DB0A561D2DEE4F00886B96 /* UIColor+SAW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SAW.h"; sourceTree = "<group>"; };
+		A2DB0A571D2DEE4F00886B96 /* UIColor+SAW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SAW.m"; sourceTree = "<group>"; };
+		A2DB0A5B1D2DEF3E00886B96 /* SAWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWBaseViewController.h; sourceTree = "<group>"; };
+		A2DB0A5C1D2DEF3E00886B96 /* SAWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWBaseViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2DB0A101D2DEA3400886B96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2DB0A291D2DEA3400886B96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2DB0A341D2DEA3500886B96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2DB0A0A1D2DEA3400886B96 = {
+			isa = PBXGroup;
+			children = (
+				A2DB0A151D2DEA3400886B96 /* Something About Wizards */,
+				A2DB0A2F1D2DEA3400886B96 /* Something About WizardsTests */,
+				A2DB0A3A1D2DEA3500886B96 /* Something About WizardsUITests */,
+				A2DB0A141D2DEA3400886B96 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2DB0A141D2DEA3400886B96 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2DB0A131D2DEA3400886B96 /* Something About Wizards.app */,
+				A2DB0A2C1D2DEA3400886B96 /* Something About WizardsTests.xctest */,
+				A2DB0A371D2DEA3500886B96 /* Something About WizardsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2DB0A151D2DEA3400886B96 /* Something About Wizards */ = {
+			isa = PBXGroup;
+			children = (
+				A2DB0A4C1D2DEA7D00886B96 /* Supporting Files */,
+				A2DB0A4B1D2DEA7900886B96 /* Controller */,
+				A2DB0A4A1D2DEA7500886B96 /* View */,
+				A2DB0A491D2DEA7000886B96 /* Model */,
+				A2DB0A1C1D2DEA3400886B96 /* ViewController.h */,
+				A2DB0A1D1D2DEA3400886B96 /* ViewController.m */,
+				A2DB0A221D2DEA3400886B96 /* Assets.xcassets */,
+				A2DB0A161D2DEA3400886B96 /* System Files */,
+			);
+			path = "Something About Wizards";
+			sourceTree = "<group>";
+		};
+		A2DB0A161D2DEA3400886B96 /* System Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2DB0A191D2DEA3400886B96 /* AppDelegate.h */,
+				A2DB0A1A1D2DEA3400886B96 /* AppDelegate.m */,
+				A2DB0A271D2DEA3400886B96 /* Info.plist */,
+				A2DB0A171D2DEA3400886B96 /* main.m */,
+			);
+			name = "System Files";
+			sourceTree = "<group>";
+		};
+		A2DB0A2F1D2DEA3400886B96 /* Something About WizardsTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2DB0A301D2DEA3400886B96 /* Something_About_WizardsTests.m */,
+				A2DB0A321D2DEA3500886B96 /* Info.plist */,
+			);
+			path = "Something About WizardsTests";
+			sourceTree = "<group>";
+		};
+		A2DB0A3A1D2DEA3500886B96 /* Something About WizardsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A2DB0A3B1D2DEA3500886B96 /* Something_About_WizardsUITests.m */,
+				A2DB0A3D1D2DEA3500886B96 /* Info.plist */,
+			);
+			path = "Something About WizardsUITests";
+			sourceTree = "<group>";
+		};
+		A2DB0A491D2DEA7000886B96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A2DB0A4A1D2DEA7500886B96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2DB0A1F1D2DEA3400886B96 /* Main.storyboard */,
+				A2DB0A241D2DEA3400886B96 /* LaunchScreen.storyboard */,
+				A2DB0A4D1D2DEAA300886B96 /* Generic Views */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A2DB0A4B1D2DEA7900886B96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A2DB0A5A1D2DEF2000886B96 /* SAWBaseViewController */,
+				A2DB0A591D2DEEF200886B96 /* SAWMasterViewController */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A2DB0A4C1D2DEA7D00886B96 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2DB0A4E1D2DED4000886B96 /* Extentions */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2DB0A4D1D2DEAA300886B96 /* Generic Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Generic Views";
+			sourceTree = "<group>";
+		};
+		A2DB0A4E1D2DED4000886B96 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				A2DB0A561D2DEE4F00886B96 /* UIColor+SAW.h */,
+				A2DB0A571D2DEE4F00886B96 /* UIColor+SAW.m */,
+			);
+			name = Extentions;
+			sourceTree = "<group>";
+		};
+		A2DB0A591D2DEEF200886B96 /* SAWMasterViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SAWMasterViewController;
+			sourceTree = "<group>";
+		};
+		A2DB0A5A1D2DEF2000886B96 /* SAWBaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A2DB0A5B1D2DEF3E00886B96 /* SAWBaseViewController.h */,
+				A2DB0A5C1D2DEF3E00886B96 /* SAWBaseViewController.m */,
+			);
+			name = SAWBaseViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2DB0A121D2DEA3400886B96 /* Something About Wizards */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2DB0A401D2DEA3500886B96 /* Build configuration list for PBXNativeTarget "Something About Wizards" */;
+			buildPhases = (
+				A2DB0A0F1D2DEA3400886B96 /* Sources */,
+				A2DB0A101D2DEA3400886B96 /* Frameworks */,
+				A2DB0A111D2DEA3400886B96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Something About Wizards";
+			productName = "Something About Wizards";
+			productReference = A2DB0A131D2DEA3400886B96 /* Something About Wizards.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A2DB0A2B1D2DEA3400886B96 /* Something About WizardsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2DB0A431D2DEA3500886B96 /* Build configuration list for PBXNativeTarget "Something About WizardsTests" */;
+			buildPhases = (
+				A2DB0A281D2DEA3400886B96 /* Sources */,
+				A2DB0A291D2DEA3400886B96 /* Frameworks */,
+				A2DB0A2A1D2DEA3400886B96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2DB0A2E1D2DEA3400886B96 /* PBXTargetDependency */,
+			);
+			name = "Something About WizardsTests";
+			productName = "Something About WizardsTests";
+			productReference = A2DB0A2C1D2DEA3400886B96 /* Something About WizardsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A2DB0A361D2DEA3500886B96 /* Something About WizardsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2DB0A461D2DEA3500886B96 /* Build configuration list for PBXNativeTarget "Something About WizardsUITests" */;
+			buildPhases = (
+				A2DB0A331D2DEA3500886B96 /* Sources */,
+				A2DB0A341D2DEA3500886B96 /* Frameworks */,
+				A2DB0A351D2DEA3500886B96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2DB0A391D2DEA3500886B96 /* PBXTargetDependency */,
+			);
+			name = "Something About WizardsUITests";
+			productName = "Something About WizardsUITests";
+			productReference = A2DB0A371D2DEA3500886B96 /* Something About WizardsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2DB0A0B1D2DEA3400886B96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Bozo Games";
+				TargetAttributes = {
+					A2DB0A121D2DEA3400886B96 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = B6FA3KDDLA;
+					};
+					A2DB0A2B1D2DEA3400886B96 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = A2DB0A121D2DEA3400886B96;
+					};
+					A2DB0A361D2DEA3500886B96 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = A2DB0A121D2DEA3400886B96;
+					};
+				};
+			};
+			buildConfigurationList = A2DB0A0E1D2DEA3400886B96 /* Build configuration list for PBXProject "Something About Wizards" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2DB0A0A1D2DEA3400886B96;
+			productRefGroup = A2DB0A141D2DEA3400886B96 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2DB0A121D2DEA3400886B96 /* Something About Wizards */,
+				A2DB0A2B1D2DEA3400886B96 /* Something About WizardsTests */,
+				A2DB0A361D2DEA3500886B96 /* Something About WizardsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2DB0A111D2DEA3400886B96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2DB0A261D2DEA3400886B96 /* LaunchScreen.storyboard in Resources */,
+				A2DB0A231D2DEA3400886B96 /* Assets.xcassets in Resources */,
+				A2DB0A211D2DEA3400886B96 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2DB0A2A1D2DEA3400886B96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2DB0A351D2DEA3500886B96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2DB0A0F1D2DEA3400886B96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2DB0A1E1D2DEA3400886B96 /* ViewController.m in Sources */,
+				A2DB0A1B1D2DEA3400886B96 /* AppDelegate.m in Sources */,
+				A2DB0A5D1D2DEF3E00886B96 /* SAWBaseViewController.m in Sources */,
+				A2DB0A181D2DEA3400886B96 /* main.m in Sources */,
+				A2DB0A581D2DEE4F00886B96 /* UIColor+SAW.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2DB0A281D2DEA3400886B96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2DB0A311D2DEA3400886B96 /* Something_About_WizardsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2DB0A331D2DEA3500886B96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2DB0A3C1D2DEA3500886B96 /* Something_About_WizardsUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2DB0A2E1D2DEA3400886B96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2DB0A121D2DEA3400886B96 /* Something About Wizards */;
+			targetProxy = A2DB0A2D1D2DEA3400886B96 /* PBXContainerItemProxy */;
+		};
+		A2DB0A391D2DEA3500886B96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2DB0A121D2DEA3400886B96 /* Something About Wizards */;
+			targetProxy = A2DB0A381D2DEA3500886B96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A2DB0A1F1D2DEA3400886B96 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2DB0A201D2DEA3400886B96 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A2DB0A241D2DEA3400886B96 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2DB0A251D2DEA3400886B96 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A2DB0A3E1D2DEA3500886B96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A2DB0A3F1D2DEA3500886B96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2DB0A411D2DEA3500886B96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Something About Wizards/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "bozo-games.Something-About-Wizards";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		A2DB0A421D2DEA3500886B96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Something About Wizards/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "bozo-games.Something-About-Wizards";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		A2DB0A441D2DEA3500886B96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Something About WizardsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "bozo-games.Something-About-WizardsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Something About Wizards.app/Something About Wizards";
+			};
+			name = Debug;
+		};
+		A2DB0A451D2DEA3500886B96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Something About WizardsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "bozo-games.Something-About-WizardsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Something About Wizards.app/Something About Wizards";
+			};
+			name = Release;
+		};
+		A2DB0A471D2DEA3500886B96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Something About WizardsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "bozo-games.Something-About-WizardsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Something About Wizards";
+			};
+			name = Debug;
+		};
+		A2DB0A481D2DEA3500886B96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Something About WizardsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "bozo-games.Something-About-WizardsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Something About Wizards";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2DB0A0E1D2DEA3400886B96 /* Build configuration list for PBXProject "Something About Wizards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2DB0A3E1D2DEA3500886B96 /* Debug */,
+				A2DB0A3F1D2DEA3500886B96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2DB0A401D2DEA3500886B96 /* Build configuration list for PBXNativeTarget "Something About Wizards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2DB0A411D2DEA3500886B96 /* Debug */,
+				A2DB0A421D2DEA3500886B96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A2DB0A431D2DEA3500886B96 /* Build configuration list for PBXNativeTarget "Something About WizardsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2DB0A441D2DEA3500886B96 /* Debug */,
+				A2DB0A451D2DEA3500886B96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A2DB0A461D2DEA3500886B96 /* Build configuration list for PBXNativeTarget "Something About WizardsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2DB0A471D2DEA3500886B96 /* Debug */,
+				A2DB0A481D2DEA3500886B96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2DB0A0B1D2DEA3400886B96 /* Project object */;
+}
