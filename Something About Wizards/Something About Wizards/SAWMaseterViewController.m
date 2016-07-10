@@ -54,19 +54,19 @@
             rotation = CGAffineTransformMakeRotation(0);
             break;
         case UIDeviceOrientationLandscapeLeft:
-            rotation = CGAffineTransformMakeRotation(90);
+            rotation = CGAffineTransformMakeRotation(M_PI_2);
             break;
         case UIDeviceOrientationPortraitUpsideDown:
             rotation = CGAffineTransformMakeRotation(M_PI);
             break;
         case UIDeviceOrientationLandscapeRight:
-            rotation = CGAffineTransformMakeRotation(270);
+            rotation = CGAffineTransformMakeRotation(3 * M_PI_4);
             break;
         default:
             break;
     };
     [UIView animateWithDuration:0.4 animations:^{
-        //self.storyViewContainer.transform = rotation;
+        self.storyViewContainer.transform = rotation;
         self.gameViewContainer.transform = rotation;
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
@@ -77,14 +77,7 @@
 #pragma mark - Delegate Methods
 #pragma mark - Target Action Mehtods
 - (IBAction)onDebug:(id)sender {
-    CGAffineTransform rotation = CGAffineTransformMakeRotation(M_PI_2);
-    [UIView animateWithDuration:0.4 animations:^{
-        //self.storyViewContainer.transform = rotation;
-        self.gameViewContainer.transform = rotation;
-        [self.view layoutIfNeeded];
-    } completion:^(BOOL finished) {
-        
-    }];
+    
     
 }
 

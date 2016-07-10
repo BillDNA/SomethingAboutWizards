@@ -587,6 +587,7 @@
 				A2DB0A421D2DEA3500886B96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2DB0A431D2DEA3500886B96 /* Build configuration list for PBXNativeTarget "Something About WizardsTests" */ = {
 			isa = XCConfigurationList;
@@ -595,6 +596,7 @@
 				A2DB0A451D2DEA3500886B96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2DB0A461D2DEA3500886B96 /* Build configuration list for PBXNativeTarget "Something About WizardsUITests" */ = {
 			isa = XCConfigurationList;
@@ -603,6 +605,7 @@
 				A2DB0A481D2DEA3500886B96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
