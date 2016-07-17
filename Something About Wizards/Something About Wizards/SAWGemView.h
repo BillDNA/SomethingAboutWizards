@@ -10,4 +10,5 @@
 
 @interface SAWGemView : SAWBaseView
 
+-(id)initWithFrame:(CGRect)frame andCoridinatesX:(NSInteger)x Y:(NSInteger)y Z:(NSInteger)z;
 @end

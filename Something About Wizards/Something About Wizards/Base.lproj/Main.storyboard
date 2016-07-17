@@ -36,7 +36,7 @@
                                     <segue destination="DOa-5E-ae5" kind="embed" id="jOe-n2-5Y7"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QS4-fv-NEY" userLabel="Game Container">
+                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QS4-fv-NEY" userLabel="Game Container">
                                 <rect key="frame" x="0.0" y="294" width="320" height="264"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="264" id="Nag-x4-XTb"/>
@@ -145,7 +145,31 @@
                     <view key="view" contentMode="scaleToFill" id="CzW-bR-hkD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AXB-Gh-Enx">
+                                <rect key="frame" x="159" y="0.0" width="2" height="264"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="2" id="qQE-mA-npp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGA-He-Ikw">
+                                <rect key="frame" x="0.0" y="131" width="320" height="2"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="fWS-wV-sW7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AXB-Gh-Enx" firstAttribute="height" secondItem="CzW-bR-hkD" secondAttribute="height" id="6mU-gd-KxU"/>
+                            <constraint firstItem="OGA-He-Ikw" firstAttribute="width" secondItem="CzW-bR-hkD" secondAttribute="width" id="931-aW-yZF"/>
+                            <constraint firstItem="AXB-Gh-Enx" firstAttribute="centerY" secondItem="CzW-bR-hkD" secondAttribute="centerY" id="DS6-ay-y4E"/>
+                            <constraint firstItem="OGA-He-Ikw" firstAttribute="centerX" secondItem="CzW-bR-hkD" secondAttribute="centerX" id="cgb-wD-mKR"/>
+                            <constraint firstItem="OGA-He-Ikw" firstAttribute="centerY" secondItem="CzW-bR-hkD" secondAttribute="centerY" id="v8L-ST-dd3"/>
+                            <constraint firstItem="AXB-Gh-Enx" firstAttribute="centerX" secondItem="CzW-bR-hkD" secondAttribute="centerX" id="xG9-sG-WRP"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ied-cQ-o7z" userLabel="First Responder" sceneMemberID="firstResponder"/>

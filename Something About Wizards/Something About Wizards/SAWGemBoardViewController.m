@@ -8,27 +8,63 @@
 
 #import "SAWGemBoardViewController.h"
 #import "SAWGemView.h"
+#import "SAWGrid.h"
 @interface SAWGemBoardViewController ()
 #pragma mark - Views
-@property (strong, nonatomic) NSMutableArray *gemViews;
+@property (strong, nonatomic) SAWGrid *gemViews;
 
 #pragma mark - Models
+@property (nonatomic) NSInteger boardRadius;
+
 @end
 
 @implementation SAWGemBoardViewController
 #pragma mark - getters and setters
--(NSMutableArray *)gemViews {
+-(NSInteger)boardRadius {
+    if (_boardRadius <= 0) {
+        _boardRadius = 3;
+    }
+    return _boardRadius;
+}
+-(NSInteger)gridRowsCount {
+    return self.boardRadius * 2 + 1;
+}
+-(NSInteger)gridColumsCount {
+    return self.boardRadius * 2 + 1;
+}
+-(SAWGrid *)gemViews {
     if (_gemViews == nil) {
-        _gemViews = [[NSMutableArray alloc] init];
+        _gemViews = [[SAWGrid alloc] initWithRows:[self gridRowsCount] columns:[self gridColumsCount]];
     }
     return  _gemViews;
 }
 #pragma mark - Controller Life Cycle Methods
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    SAWGemView *gv = [[SAWGemView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
-    [self.view addSubview:gv];
-    [self.gemViews addObject:gv];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    CGFloat width = 45.0;
+    CGFloat height = sqrt(3.0)/2.0 * width;
+    CGPoint center = CGPointMake((self.view.frame.size.width + 10) / 2.0, (self.view.frame.size.height+10) / 2.0);
+    NSInteger X = 0;
+    NSInteger Y = 0;
+    for(NSInteger x = 0-self.boardRadius; x < self.boardRadius+1; x++) {
+        Y = 0;
+        
+        for(NSInteger y = 0-self.boardRadius + floor(ABS(x)/2); y < self.boardRadius+1 - (ceil(ABS(x)/2)) - (ABS(x)%2); y++) {
+            NSInteger z = 0 - x - y;
+            
+            CGFloat xOff = x * (0.75 * width);
+            CGFloat yOff = y * height;
+            if (ABS(x) % 2 == 1) {
+                yOff += height/2.0;
+            }
+            SAWGemView *gv = [[SAWGemView alloc] initWithFrame:CGRectMake(center.x + xOff - width/2.0, center.y + yOff - height / 2.0,height,width) andCoridinatesX:x Y:y Z:z ];
+            
+            [self.view addSubview:gv];
+            [self.gemViews setObject:gv inRow:X column:Y];
+            Y++;
+        }
+        X++;
+    }
 }
 #pragma mark - Update Methods
 #pragma mark - Data Source Methods
