@@ -9,7 +9,7 @@
 #import "SAWBaseView.h"
 
 @interface SAWGemView : SAWBaseView
-@property (nonatomic) isSelected;
+@property (nonatomic) BOOL isSelected;
 
 -(id)initWithFrame:(CGRect)frame andCoridinatesX:(NSInteger)x Y:(NSInteger)y Z:(NSInteger)z;
 @end
