@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Maseter View Controller-->
@@ -17,44 +19,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wTF-vf-uPD" userLabel="Spacer">
-                                <rect key="frame" x="40" y="220" width="240" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wTF-vf-uPD" userLabel="Spacer">
+                                <rect key="frame" x="40" y="142" width="240" height="284"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="o8a-uA-wJe"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2u-sF-56C" userLabel="Story Container">
-                                <rect key="frame" x="0.0" y="20" width="320" height="284"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2u-sF-56C" userLabel="Story Container">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="284"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="284" id="Nd0-SP-xD7"/>
+                                    <constraint firstAttribute="width" constant="320" id="ui7-RD-fes"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="DOa-5E-ae5" kind="embed" id="jOe-n2-5Y7"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QS4-fv-NEY" userLabel="Game Container">
-                                <rect key="frame" x="0.0" y="304" width="320" height="264"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QS4-fv-NEY" userLabel="Game Container">
+                                <rect key="frame" x="0.0" y="294" width="320" height="264"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="264" id="Nag-x4-XTb"/>
+                                    <constraint firstAttribute="width" constant="320" id="zig-mD-c4G"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="o3N-JE-G0N" kind="embed" id="CGk-u7-O7Y"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwf-fw-hEN">
-                                <rect key="frame" x="146" y="170" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="onDebug:" destination="bYE-a5-LJr" eventType="touchUpInside" id="TFd-ca-aeW"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wTF-vf-uPD" firstAttribute="centerX" secondItem="6y4-6w-Q8z" secondAttribute="centerX" id="1hE-5C-skt"/>
+                            <constraint firstItem="wTF-vf-uPD" firstAttribute="centerY" secondItem="6y4-6w-Q8z" secondAttribute="centerY" id="PFL-8y-9MG"/>
+                            <constraint firstItem="f2u-sF-56C" firstAttribute="centerX" secondItem="wTF-vf-uPD" secondAttribute="centerX" id="Vrl-wj-Eue"/>
+                            <constraint firstItem="wTF-vf-uPD" firstAttribute="height" secondItem="6y4-6w-Q8z" secondAttribute="height" multiplier="0.5" id="aRw-SQ-h6H"/>
+                            <constraint firstItem="QS4-fv-NEY" firstAttribute="centerX" secondItem="wTF-vf-uPD" secondAttribute="centerX" id="adB-bL-x7B"/>
+                            <constraint firstItem="QS4-fv-NEY" firstAttribute="centerY" secondItem="wTF-vf-uPD" secondAttribute="bottom" id="hzF-1a-pTV"/>
+                            <constraint firstItem="f2u-sF-56C" firstAttribute="centerY" secondItem="wTF-vf-uPD" secondAttribute="top" id="psN-rc-0A2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sDy-0s-aBu"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="gameViewContainer" destination="QS4-fv-NEY" id="vuc-wt-uvQ"/>
+                        <outlet property="gameViewContainerHeight" destination="Nag-x4-XTb" id="R4z-RB-FJh"/>
+                        <outlet property="gameViewContainerWidth" destination="zig-mD-c4G" id="K4j-sq-N3u"/>
                         <outlet property="storyViewContainer" destination="f2u-sF-56C" id="AXH-h0-TPn"/>
+                        <outlet property="storyViewContainerHeight" destination="Nd0-SP-xD7" id="z0M-pk-tUt"/>
+                        <outlet property="storyViewContainerWidth" destination="ui7-RD-fes" id="EuX-BD-8yq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JIw-Z8-Dye" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -80,7 +95,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="zGt-bQ-A0B" firstAttribute="centerX" secondItem="tFv-GS-w7H" secondAttribute="centerX" id="IhS-CX-Iod"/>
                             <constraint firstItem="zGt-bQ-A0B" firstAttribute="centerY" secondItem="tFv-GS-w7H" secondAttribute="centerY" id="JU4-pK-pbF"/>
@@ -91,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="214" y="362"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="EKP-vL-lgy">
             <objects>
-                <viewController id="o3N-JE-G0N" sceneMemberID="viewController">
+                <viewController id="o3N-JE-G0N" customClass="SAWGameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wpC-at-3Vf"/>
                         <viewControllerLayoutGuide type="bottom" id="Gma-Kz-2Hc"/>
@@ -103,23 +118,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5s-w2-AKh">
-                                <rect key="frame" x="113" y="122" width="95" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0XB-Dy-HG5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
+                                <connections>
+                                    <segue destination="KFJ-yq-LVZ" kind="embed" id="Kv6-t7-cSA"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="K5s-w2-AKh" firstAttribute="centerY" secondItem="E9o-Ag-0mC" secondAttribute="centerY" id="FIU-qZ-uOV"/>
-                            <constraint firstItem="K5s-w2-AKh" firstAttribute="centerX" secondItem="E9o-Ag-0mC" secondAttribute="centerX" id="Kdf-Ct-W9n"/>
+                            <constraint firstItem="0XB-Dy-HG5" firstAttribute="centerX" secondItem="E9o-Ag-0mC" secondAttribute="centerX" id="Qj3-8U-LUc"/>
+                            <constraint firstItem="0XB-Dy-HG5" firstAttribute="height" secondItem="E9o-Ag-0mC" secondAttribute="height" id="fxW-FN-Scy"/>
+                            <constraint firstItem="0XB-Dy-HG5" firstAttribute="centerY" secondItem="E9o-Ag-0mC" secondAttribute="centerY" id="iz4-DJ-chJ"/>
+                            <constraint firstItem="0XB-Dy-HG5" firstAttribute="width" secondItem="E9o-Ag-0mC" secondAttribute="width" id="tHT-Cg-dgO"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSK-bN-sRz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-217" y="989"/>
+            <point key="canvasLocation" x="-217" y="1067"/>
+        </scene>
+        <!--Gem Board View Controller-->
+        <scene sceneID="yDV-5a-Ivy">
+            <objects>
+                <viewController id="KFJ-yq-LVZ" customClass="SAWGemBoardViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CzW-bR-hkD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ied-cQ-o7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-217" y="1532"/>
         </scene>
     </scenes>
 </document>

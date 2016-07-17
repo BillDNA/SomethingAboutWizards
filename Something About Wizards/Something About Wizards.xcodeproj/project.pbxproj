@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2B1D2D11D3BFEA700194A93 /* SAWGemBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1D2D01D3BFEA700194A93 /* SAWGemBoardViewController.m */; };
+		A2B1D2D41D3BFF0D00194A93 /* SAWBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1D2D31D3BFF0D00194A93 /* SAWBaseView.m */; };
+		A2B1D2D81D3BFF9800194A93 /* SAWGemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1D2D71D3BFF9800194A93 /* SAWGemView.m */; };
+		A2B1D2DA1D3BFFA400194A93 /* SAWGemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B1D2D91D3BFFA400194A93 /* SAWGemView.xib */; };
+		A2B1D2DF1D3C00E300194A93 /* SAWGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1D2DE1D3C00E300194A93 /* SAWGameViewController.m */; };
+		A2B1D2E41D3C025F00194A93 /* SAWStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1D2E31D3C025F00194A93 /* SAWStoryViewController.m */; };
 		A2DB0A181D2DEA3400886B96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB0A171D2DEA3400886B96 /* main.m */; };
 		A2DB0A1B1D2DEA3400886B96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB0A1A1D2DEA3400886B96 /* AppDelegate.m */; };
 		A2DB0A1E1D2DEA3400886B96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB0A1D1D2DEA3400886B96 /* ViewController.m */; };
@@ -38,6 +44,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A2B1D2CF1D3BFEA700194A93 /* SAWGemBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWGemBoardViewController.h; sourceTree = "<group>"; };
+		A2B1D2D01D3BFEA700194A93 /* SAWGemBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWGemBoardViewController.m; sourceTree = "<group>"; };
+		A2B1D2D21D3BFF0D00194A93 /* SAWBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWBaseView.h; sourceTree = "<group>"; };
+		A2B1D2D31D3BFF0D00194A93 /* SAWBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWBaseView.m; sourceTree = "<group>"; };
+		A2B1D2D61D3BFF9800194A93 /* SAWGemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWGemView.h; sourceTree = "<group>"; };
+		A2B1D2D71D3BFF9800194A93 /* SAWGemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWGemView.m; sourceTree = "<group>"; };
+		A2B1D2D91D3BFFA400194A93 /* SAWGemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAWGemView.xib; sourceTree = "<group>"; };
+		A2B1D2DD1D3C00E300194A93 /* SAWGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWGameViewController.h; sourceTree = "<group>"; };
+		A2B1D2DE1D3C00E300194A93 /* SAWGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWGameViewController.m; sourceTree = "<group>"; };
+		A2B1D2E21D3C025F00194A93 /* SAWStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWStoryViewController.h; sourceTree = "<group>"; };
+		A2B1D2E31D3C025F00194A93 /* SAWStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWStoryViewController.m; sourceTree = "<group>"; };
 		A2DB0A131D2DEA3400886B96 /* Something About Wizards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Something About Wizards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DB0A171D2DEA3400886B96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2DB0A191D2DEA3400886B96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -87,6 +104,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2B1D2CE1D3BFE8400194A93 /* SAWGemBoardViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A2B1D2CF1D3BFEA700194A93 /* SAWGemBoardViewController.h */,
+				A2B1D2D01D3BFEA700194A93 /* SAWGemBoardViewController.m */,
+			);
+			name = SAWGemBoardViewController;
+			sourceTree = "<group>";
+		};
+		A2B1D2D51D3BFF8000194A93 /* SAWGemView */ = {
+			isa = PBXGroup;
+			children = (
+				A2B1D2D61D3BFF9800194A93 /* SAWGemView.h */,
+				A2B1D2D71D3BFF9800194A93 /* SAWGemView.m */,
+				A2B1D2D91D3BFFA400194A93 /* SAWGemView.xib */,
+			);
+			name = SAWGemView;
+			sourceTree = "<group>";
+		};
+		A2B1D2DB1D3C009100194A93 /* SAWGameViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A2B1D2DD1D3C00E300194A93 /* SAWGameViewController.h */,
+				A2B1D2DE1D3C00E300194A93 /* SAWGameViewController.m */,
+				A2B1D2CE1D3BFE8400194A93 /* SAWGemBoardViewController */,
+				A2B1D2E01D3C014700194A93 /* SAWMenuViewController */,
+			);
+			name = SAWGameViewController;
+			sourceTree = "<group>";
+		};
+		A2B1D2DC1D3C00C100194A93 /* SAWStoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A2B1D2E21D3C025F00194A93 /* SAWStoryViewController.h */,
+				A2B1D2E31D3C025F00194A93 /* SAWStoryViewController.m */,
+			);
+			name = SAWStoryViewController;
+			sourceTree = "<group>";
+		};
+		A2B1D2E01D3C014700194A93 /* SAWMenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A2B1D2E11D3C01E800194A93 /* SAWFullMenuViewController */,
+			);
+			name = SAWMenuViewController;
+			sourceTree = "<group>";
+		};
+		A2B1D2E11D3C01E800194A93 /* SAWFullMenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SAWFullMenuViewController;
+			sourceTree = "<group>";
+		};
+		A2B1D2E51D3C028100194A93 /* Story Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Story Views";
+			sourceTree = "<group>";
+		};
+		A2B1D2E61D3C028B00194A93 /* Game Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2B1D2D51D3BFF8000194A93 /* SAWGemView */,
+			);
+			name = "Game Views";
+			sourceTree = "<group>";
+		};
 		A2DB0A0A1D2DEA3400886B96 = {
 			isa = PBXGroup;
 			children = (
@@ -163,7 +249,9 @@
 			children = (
 				A2DB0A1F1D2DEA3400886B96 /* Main.storyboard */,
 				A2DB0A241D2DEA3400886B96 /* LaunchScreen.storyboard */,
-				A2DB0A4D1D2DEAA300886B96 /* Generic Views */,
+				A2B1D2E51D3C028100194A93 /* Story Views */,
+				A2B1D2E61D3C028B00194A93 /* Game Views */,
+				A2DB0A4D1D2DEAA300886B96 /* SAWBaseView */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -171,8 +259,8 @@
 		A2DB0A4B1D2DEA7900886B96 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A2DB0A5A1D2DEF2000886B96 /* SAWBaseViewController */,
 				A2DB0A591D2DEEF200886B96 /* SAWMasterViewController */,
+				A2DB0A5A1D2DEF2000886B96 /* SAWBaseViewController */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -185,11 +273,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A2DB0A4D1D2DEAA300886B96 /* Generic Views */ = {
+		A2DB0A4D1D2DEAA300886B96 /* SAWBaseView */ = {
 			isa = PBXGroup;
 			children = (
+				A2B1D2D21D3BFF0D00194A93 /* SAWBaseView.h */,
+				A2B1D2D31D3BFF0D00194A93 /* SAWBaseView.m */,
 			);
-			name = "Generic Views";
+			name = SAWBaseView;
 			sourceTree = "<group>";
 		};
 		A2DB0A4E1D2DED4000886B96 /* Extentions */ = {
@@ -206,6 +296,8 @@
 			children = (
 				A2DB0A5F1D2DF41100886B96 /* SAWMaseterViewController.h */,
 				A2DB0A601D2DF41100886B96 /* SAWMaseterViewController.m */,
+				A2B1D2DC1D3C00C100194A93 /* SAWStoryViewController */,
+				A2B1D2DB1D3C009100194A93 /* SAWGameViewController */,
 			);
 			name = SAWMasterViewController;
 			sourceTree = "<group>";
@@ -325,6 +417,7 @@
 			files = (
 				A2DB0A261D2DEA3400886B96 /* LaunchScreen.storyboard in Resources */,
 				A2DB0A231D2DEA3400886B96 /* Assets.xcassets in Resources */,
+				A2B1D2DA1D3BFFA400194A93 /* SAWGemView.xib in Resources */,
 				A2DB0A211D2DEA3400886B96 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,10 +444,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2DB0A1E1D2DEA3400886B96 /* ViewController.m in Sources */,
+				A2B1D2D41D3BFF0D00194A93 /* SAWBaseView.m in Sources */,
 				A2DB0A1B1D2DEA3400886B96 /* AppDelegate.m in Sources */,
+				A2B1D2D11D3BFEA700194A93 /* SAWGemBoardViewController.m in Sources */,
 				A2DB0A611D2DF41100886B96 /* SAWMaseterViewController.m in Sources */,
+				A2B1D2D81D3BFF9800194A93 /* SAWGemView.m in Sources */,
 				A2DB0A5D1D2DEF3E00886B96 /* SAWBaseViewController.m in Sources */,
 				A2DB0A181D2DEA3400886B96 /* main.m in Sources */,
+				A2B1D2DF1D3C00E300194A93 /* SAWGameViewController.m in Sources */,
+				A2B1D2E41D3C025F00194A93 /* SAWStoryViewController.m in Sources */,
 				A2DB0A581D2DEE4F00886B96 /* UIColor+SAW.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

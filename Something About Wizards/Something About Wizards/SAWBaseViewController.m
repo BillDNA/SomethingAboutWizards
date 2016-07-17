@@ -57,6 +57,9 @@
     [super didReceiveMemoryWarning];
 }
 #pragma mark - Update Methods
+-(BOOL)prefersStatusBarHidden {
+    return YES;
+}
 #pragma mark - Data Source Methods
 #pragma mark - Delegate Methods
 #pragma mark - Target Action Mehtods
