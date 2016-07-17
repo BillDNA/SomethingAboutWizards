@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="-217" y="482"/>
         </scene>
-        <!--View Controller-->
+        <!--Story View Controller-->
         <scene sceneID="nWP-Eq-Kb9">
             <objects>
-                <viewController id="DOa-5E-ae5" sceneMemberID="viewController">
+                <viewController id="DOa-5E-ae5" customClass="SAWStoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ANc-2P-yI9"/>
                         <viewControllerLayoutGuide type="bottom" id="F6R-3I-7vg"/>
@@ -88,17 +88,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="284"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGt-bQ-A0B">
-                                <rect key="frame" x="117" y="131" width="87" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pm8-YD-mmd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="284"/>
+                                <connections>
+                                    <segue destination="dnt-cR-Gct" kind="embed" id="qmt-5m-hbp"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="zGt-bQ-A0B" firstAttribute="centerX" secondItem="tFv-GS-w7H" secondAttribute="centerX" id="IhS-CX-Iod"/>
-                            <constraint firstItem="zGt-bQ-A0B" firstAttribute="centerY" secondItem="tFv-GS-w7H" secondAttribute="centerY" id="JU4-pK-pbF"/>
+                            <constraint firstItem="Pm8-YD-mmd" firstAttribute="width" secondItem="tFv-GS-w7H" secondAttribute="width" id="E3K-cu-FjW"/>
+                            <constraint firstItem="Pm8-YD-mmd" firstAttribute="centerX" secondItem="tFv-GS-w7H" secondAttribute="centerX" id="FU6-E2-Dvt"/>
+                            <constraint firstItem="Pm8-YD-mmd" firstAttribute="centerY" secondItem="tFv-GS-w7H" secondAttribute="centerY" id="lKo-Uf-9V3"/>
+                            <constraint firstItem="Pm8-YD-mmd" firstAttribute="height" secondItem="tFv-GS-w7H" secondAttribute="height" id="z4n-gT-vUe"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -142,6 +144,10 @@
         <scene sceneID="yDV-5a-Ivy">
             <objects>
                 <viewController id="KFJ-yq-LVZ" customClass="SAWGemBoardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xXj-sk-3cL"/>
+                        <viewControllerLayoutGuide type="bottom" id="oNC-ND-BLL"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CzW-bR-hkD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,6 +181,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ied-cQ-o7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-217" y="1532"/>
+        </scene>
+        <!--Combat View Controller-->
+        <scene sceneID="FMt-FF-1xq">
+            <objects>
+                <viewController id="dnt-cR-Gct" customClass="SAWCombatViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xp9-Qp-RCh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="284"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pv9-Da-Msd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="284"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pv9-Da-Msd" firstAttribute="centerY" secondItem="Xp9-Qp-RCh" secondAttribute="centerY" id="4T1-JH-J0r"/>
+                            <constraint firstItem="Pv9-Da-Msd" firstAttribute="height" secondItem="Xp9-Qp-RCh" secondAttribute="height" id="I3p-K2-Pzt"/>
+                            <constraint firstItem="Pv9-Da-Msd" firstAttribute="centerX" secondItem="Xp9-Qp-RCh" secondAttribute="centerX" id="TxD-ce-HLi"/>
+                            <constraint firstItem="Pv9-Da-Msd" firstAttribute="width" secondItem="Xp9-Qp-RCh" secondAttribute="width" id="f59-Pe-6Qk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BackgroundImageView" destination="Pv9-Da-Msd" id="QyA-cs-pVp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XTH-39-gU7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="214" y="754"/>
         </scene>
     </scenes>
 </document>
