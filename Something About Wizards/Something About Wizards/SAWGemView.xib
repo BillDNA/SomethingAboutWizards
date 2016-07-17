@@ -15,10 +15,19 @@
             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="d3L-0N-ufi" appends="YES" id="jVF-up-sLE"/>
+            </connections>
         </view>
+        <tapGestureRecognizer id="d3L-0N-ufi">
+            <connections>
+                <action selector="onTap:" destination="-1" id="p8I-ej-9LR"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>
