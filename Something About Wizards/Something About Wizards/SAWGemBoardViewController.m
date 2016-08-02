@@ -39,9 +39,9 @@
     return  _gemViews;
 }
 #pragma mark - Controller Life Cycle Methods
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    CGFloat width = 45.0;
+-(void) viewWillAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    CGFloat width = 100.0;
     CGFloat height = sqrt(3.0)/2.0 * width;
     CGPoint center = CGPointMake(self.view.frame.origin.x + (self.view.frame.size.width) / 2.0,self.view.frame.origin.y +  (self.view.frame.size.height) / 2.0);
     NSInteger X = 0;
@@ -70,7 +70,7 @@
     CGPoint center = CGPointMake(self.view.frame.origin.x + (self.view.frame.size.width) / 2.0,self.view.frame.origin.y +  (self.view.frame.size.height) / 2.0);
     NSInteger X = 0;
     NSInteger Y = 0;
-    CGFloat width = 45.0;
+    CGFloat width = 43;
     CGFloat height = sqrt(3.0)/2.0 * width;
     for(NSInteger x = 0-self.boardRadius; x < self.boardRadius+1; x++) {
         Y = 0;
@@ -87,7 +87,6 @@
         }
         X++;
     }
-    
 }
 #pragma mark - Data Source Methods
 #pragma mark - Delegate Methods

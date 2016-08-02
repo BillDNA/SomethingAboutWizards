@@ -7,6 +7,8 @@
 //
 
 #import "SAWGemView.h"
+#import "SAWEnums.h"
+#import "UIColor+SAW.h"
 @interface SAWGemView ()
 
 @property (weak, nonatomic) IBOutlet UIView *view;
@@ -16,6 +18,12 @@
 @end
 @implementation SAWGemView
 #pragma mark - getters and setters
+-(UIColor *)borderColor {
+    if (self.isSelected) {
+        return [UIColor gemBorderColorGivenState:selectedGem];
+    }
+    return  [UIColor gemBorderColorGivenState:normalGem];
+}
 -(void)setFrame:(CGRect)frame {
     [super setFrame:frame];
     [self setNeedsDisplay];
@@ -29,6 +37,7 @@
         self.x = x;
         self.y = y;
         self.z = z;
+        self.school = (5 + x + y) % 5;
     }
     return self;
 }
@@ -36,11 +45,11 @@
 -(void) drawRect: (CGRect) rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    UIColor * redColor = [UIColor colorWithRed:ABS(self.x) / 5.0 green:ABS(self.y) / 5.0 blue:ABS(self.z) / 5.0 alpha:1.0];
+    UIColor * gemColor = [UIColor gemColorGivenSchoolOfMagic:self.school];
     
     CGMutablePathRef path = CGPathCreateMutable();
     CGPoint center = CGPointMake(rect.size.width / 2, rect.size.height / 2);
-    CGFloat radius = rect.size.width / 2 - 0.5;
+    CGFloat radius = rect.size.width / 2 - 1;
     CGPoint corner = [self getHexCornerPointFromCenter:center toPointIndexed:0 withRadius:radius];
     CGPathMoveToPoint(path, NULL, corner.x, corner.y);
     for (int i = 1; i < 6; i++) {
@@ -50,11 +59,11 @@
     CGPathCloseSubpath(path);
     
     CGContextAddPath(context, path);
-    CGContextSetFillColorWithColor(context, redColor.CGColor);
+    CGContextSetFillColorWithColor(context, gemColor.CGColor);
     CGContextFillPath(context);
     
     CGContextAddPath(context, path);
-    CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
+    CGContextSetStrokeColorWithColor(context, [self borderColor].CGColor);
     CGContextSetLineWidth(context, 2.0);
     CGContextStrokePath (context);
 
@@ -72,15 +81,49 @@
     return CGPointMake(q, r);
 }
 #pragma mark - event handlers
--(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
-    for (UIView *view in self.subviews) {
+-(UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    UIView *hitView = [super hitTest:point withEvent:event];
+    
+    // If the hitView is THIS view, return nil and allow hitTest:withEvent: to
+    // continue traversing the hierarchy to find the underlying view.
+    if (hitView == self.view) {
         
-        if (!view.hidden && view.alpha > 0 && view.userInteractionEnabled && [view pointInside:[self convertPoint:point toView:view] withEvent:event])
-            return YES;
+        CGPoint p = point;
+        CGFloat w = self.frame.size.width;
+        CGFloat h = self.frame.size.height;
+        CGFloat x = p.x - w / 2.0;
+        CGFloat y = -1*(p.y - h / 2.0);
+        CGFloat m = -2 * h / w;
+        CGFloat b = 2*h/w *(w/2);
+        BOOL inHex = NO;
+        if (y <= 0 ) { //lower half
+            if(x >= -w/4 && w <= w/4) {
+                inHex = y >= -h/2;
+            } else if(x >= 0) { //Right half
+                inHex = (y >= -m * x - b);
+            } else { //Left hal
+                inHex = (y >= m * x - b);
+            }
+        } else { //upper half
+            if(x >= -w/4 && w <= w/4) {
+                inHex = y <= h/2;
+            } else if(x >= 0) { //Right half
+                inHex = (y <= m * x + b);
+            } else { //Left half
+                inHex = (y <= -m * x + b);
+            }
+        }
+        if (inHex) {
+            return self.view;
+        }
+        return nil;
     }
-    return NO;
+    // Else return the hitView (as it could be one of this view's buttons):
+    return hitView;
 }
 - (IBAction)onTap:(UITapGestureRecognizer *)sender {
+    self.isSelected = !self.isSelected;
+    [self setNeedsDisplay];
 }
 
 @end

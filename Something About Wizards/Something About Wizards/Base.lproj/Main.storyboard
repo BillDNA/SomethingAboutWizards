@@ -4,6 +4,8 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -120,21 +122,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0XB-Dy-HG5">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0XB-Dy-HG5" userLabel="Gem Board">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
                                 <connections>
                                     <segue destination="KFJ-yq-LVZ" kind="embed" id="Kv6-t7-cSA"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmn-7J-slo" userLabel="Spell Book">
+                                <rect key="frame" x="320" y="0.0" width="320" height="264"/>
+                                <connections>
+                                    <segue destination="TSW-5h-kkS" kind="embed" id="eZw-Y0-uP2"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vqk-bc-lNy" userLabel="SpellBook Button">
+                                <rect key="frame" x="244" y="12" width="48" height="48"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp_icon_menu_spellbook" translatesAutoresizingMaskIntoConstraints="NO" id="uku-xd-XYt">
+                                        <rect key="frame" x="6" y="6" width="36" height="36"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTl-fE-qzj">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                        <connections>
+                                            <action selector="onSpellbookIcon:" destination="o3N-JE-G0N" eventType="touchUpInside" id="Miv-WP-8U6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ZTl-fE-qzj" secondAttribute="bottom" id="0RS-6Z-mcB"/>
+                                    <constraint firstAttribute="width" secondItem="Vqk-bc-lNy" secondAttribute="height" multiplier="1:1" id="0v1-Jd-0Et"/>
+                                    <constraint firstItem="uku-xd-XYt" firstAttribute="height" secondItem="Vqk-bc-lNy" secondAttribute="height" multiplier="0.75" id="9MZ-lJ-6Ub"/>
+                                    <constraint firstItem="uku-xd-XYt" firstAttribute="top" secondItem="Vqk-bc-lNy" secondAttribute="top" id="Bil-xf-TWy"/>
+                                    <constraint firstAttribute="trailing" secondItem="uku-xd-XYt" secondAttribute="trailing" id="DyF-rJ-ag8"/>
+                                    <constraint firstAttribute="bottom" secondItem="uku-xd-XYt" secondAttribute="bottom" id="IzB-0I-0y1"/>
+                                    <constraint firstItem="uku-xd-XYt" firstAttribute="centerX" secondItem="Vqk-bc-lNy" secondAttribute="centerX" id="J62-4S-OmT"/>
+                                    <constraint firstAttribute="height" constant="48" id="QoT-yD-0Di"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZTl-fE-qzj" secondAttribute="trailing" id="WDY-HE-NvZ"/>
+                                    <constraint firstItem="uku-xd-XYt" firstAttribute="centerY" secondItem="Vqk-bc-lNy" secondAttribute="centerY" id="hCT-8Y-jxM"/>
+                                    <constraint firstItem="ZTl-fE-qzj" firstAttribute="leading" secondItem="Vqk-bc-lNy" secondAttribute="leading" id="l8A-4q-frM"/>
+                                    <constraint firstItem="uku-xd-XYt" firstAttribute="width" secondItem="Vqk-bc-lNy" secondAttribute="width" multiplier="0.75" id="nkz-nS-RX8"/>
+                                    <constraint firstItem="ZTl-fE-qzj" firstAttribute="top" secondItem="Vqk-bc-lNy" secondAttribute="top" id="qgq-kI-sNm"/>
+                                    <constraint firstItem="uku-xd-XYt" firstAttribute="leading" secondItem="Vqk-bc-lNy" secondAttribute="leading" id="z9p-E9-uSc"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Bil-xf-TWy"/>
+                                        <exclude reference="DyF-rJ-ag8"/>
+                                        <exclude reference="IzB-0I-0y1"/>
+                                        <exclude reference="z9p-E9-uSc"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jmn-7J-slo" firstAttribute="top" secondItem="wpC-at-3Vf" secondAttribute="bottom" id="ACa-ef-jls"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vqk-bc-lNy" secondAttribute="trailing" constant="12" id="FVI-zp-pS8"/>
+                            <constraint firstItem="jmn-7J-slo" firstAttribute="leading" secondItem="E9o-Ag-0mC" secondAttribute="leading" constant="320" id="H2V-SI-m3R"/>
                             <constraint firstItem="0XB-Dy-HG5" firstAttribute="centerX" secondItem="E9o-Ag-0mC" secondAttribute="centerX" id="Qj3-8U-LUc"/>
+                            <constraint firstItem="Vqk-bc-lNy" firstAttribute="top" secondItem="wpC-at-3Vf" secondAttribute="bottom" constant="12" id="W9J-OL-7e7"/>
+                            <constraint firstItem="jmn-7J-slo" firstAttribute="height" secondItem="E9o-Ag-0mC" secondAttribute="height" id="Zq1-9K-taP"/>
                             <constraint firstItem="0XB-Dy-HG5" firstAttribute="height" secondItem="E9o-Ag-0mC" secondAttribute="height" id="fxW-FN-Scy"/>
                             <constraint firstItem="0XB-Dy-HG5" firstAttribute="centerY" secondItem="E9o-Ag-0mC" secondAttribute="centerY" id="iz4-DJ-chJ"/>
+                            <constraint firstItem="jmn-7J-slo" firstAttribute="width" secondItem="E9o-Ag-0mC" secondAttribute="width" id="qsX-2J-Pmj"/>
                             <constraint firstItem="0XB-Dy-HG5" firstAttribute="width" secondItem="E9o-Ag-0mC" secondAttribute="width" id="tHT-Cg-dgO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gemBoardContainer" destination="0XB-Dy-HG5" id="XQ3-Qm-fB9"/>
+                        <outlet property="speelBookButtonBackGroundView" destination="Vqk-bc-lNy" id="rUR-Yu-ue9"/>
+                        <outlet property="spellBookButtonImageView" destination="uku-xd-XYt" id="JNP-Re-e5p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSK-bN-sRz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,31 +209,7 @@
                     <view key="view" contentMode="scaleToFill" id="CzW-bR-hkD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AXB-Gh-Enx">
-                                <rect key="frame" x="159" y="0.0" width="2" height="264"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="2" id="qQE-mA-npp"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGA-He-Ikw">
-                                <rect key="frame" x="0.0" y="131" width="320" height="2"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="2" id="fWS-wV-sW7"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="AXB-Gh-Enx" firstAttribute="height" secondItem="CzW-bR-hkD" secondAttribute="height" id="6mU-gd-KxU"/>
-                            <constraint firstItem="OGA-He-Ikw" firstAttribute="width" secondItem="CzW-bR-hkD" secondAttribute="width" id="931-aW-yZF"/>
-                            <constraint firstItem="AXB-Gh-Enx" firstAttribute="centerY" secondItem="CzW-bR-hkD" secondAttribute="centerY" id="DS6-ay-y4E"/>
-                            <constraint firstItem="OGA-He-Ikw" firstAttribute="centerX" secondItem="CzW-bR-hkD" secondAttribute="centerX" id="cgb-wD-mKR"/>
-                            <constraint firstItem="OGA-He-Ikw" firstAttribute="centerY" secondItem="CzW-bR-hkD" secondAttribute="centerY" id="v8L-ST-dd3"/>
-                            <constraint firstItem="AXB-Gh-Enx" firstAttribute="centerX" secondItem="CzW-bR-hkD" secondAttribute="centerX" id="xG9-sG-WRP"/>
-                        </constraints>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ied-cQ-o7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -186,6 +220,10 @@
         <scene sceneID="FMt-FF-1xq">
             <objects>
                 <viewController id="dnt-cR-Gct" customClass="SAWCombatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="50r-Xw-Vjj"/>
+                        <viewControllerLayoutGuide type="bottom" id="5dx-Nn-Y9p"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Xp9-Qp-RCh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="284"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -210,5 +248,36 @@
             </objects>
             <point key="canvasLocation" x="214" y="754"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="nfP-9d-ll7">
+            <objects>
+                <viewController id="TSW-5h-kkS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5e5-NY-Cuh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SoN-nE-QqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="252" y="1304"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="uI1-QE-Eg7">
+            <objects>
+                <viewController id="0Zn-OK-gCz" customClass="SAWMenu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G58-Wm-ola">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pqu-Uu-HSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-562" y="1416"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="temp_icon_menu_spellbook" width="512" height="512"/>
+    </resources>
 </document>

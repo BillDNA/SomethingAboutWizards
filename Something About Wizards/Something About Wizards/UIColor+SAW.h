@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SAWEnums.h"
 
 @interface UIColor (NSObject)
 
++(UIColor *)gemBorderColorGivenState:(gemState)state;
++(UIColor *)gemColorGivenSchoolOfMagic:(schoolOfMagic)school;
 @end

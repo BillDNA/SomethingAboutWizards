@@ -7,8 +7,10 @@
 //
 
 #import "SAWBaseView.h"
+#import "SAWEnums.h"
 
 @interface SAWGemView : SAWBaseView
+@property (nonatomic) schoolOfMagic school;
 @property (nonatomic) BOOL isSelected;
 
 -(id)initWithFrame:(CGRect)frame andCoridinatesX:(NSInteger)x Y:(NSInteger)y Z:(NSInteger)z;
