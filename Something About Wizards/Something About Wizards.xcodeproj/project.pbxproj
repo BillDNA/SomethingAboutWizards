@@ -29,6 +29,7 @@
 		A2DB0A581D2DEE4F00886B96 /* UIColor+SAW.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB0A571D2DEE4F00886B96 /* UIColor+SAW.m */; };
 		A2DB0A5D1D2DEF3E00886B96 /* SAWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB0A5C1D2DEF3E00886B96 /* SAWBaseViewController.m */; };
 		A2DB0A611D2DF41100886B96 /* SAWMaseterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB0A601D2DF41100886B96 /* SAWMaseterViewController.m */; };
+		F10322A61D57C5AC003676F5 /* SAWSpell.m in Sources */ = {isa = PBXBuildFile; fileRef = F10322A51D57C5AC003676F5 /* SAWSpell.m */; };
 		F158C84C1D3C32ED009EA0EC /* SAWCombatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F158C84B1D3C32ED009EA0EC /* SAWCombatViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,8 @@
 		A2DB0A5C1D2DEF3E00886B96 /* SAWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWBaseViewController.m; sourceTree = "<group>"; };
 		A2DB0A5F1D2DF41100886B96 /* SAWMaseterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWMaseterViewController.h; sourceTree = "<group>"; };
 		A2DB0A601D2DF41100886B96 /* SAWMaseterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWMaseterViewController.m; sourceTree = "<group>"; };
+		F10322A41D57C5AC003676F5 /* SAWSpell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWSpell.h; sourceTree = "<group>"; };
+		F10322A51D57C5AC003676F5 /* SAWSpell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWSpell.m; sourceTree = "<group>"; };
 		F158C84A1D3C32ED009EA0EC /* SAWCombatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWCombatViewController.h; sourceTree = "<group>"; };
 		F158C84B1D3C32ED009EA0EC /* SAWCombatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWCombatViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -306,6 +309,7 @@
 		A2DB0A491D2DEA7000886B96 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F10322A71D57C5E3003676F5 /* SAWSpell */,
 				A2943E621D57B15E00CD483C /* SAWGem */,
 				A2943E5A1D57AF9D00CD483C /* SAWSpellBook */,
 				A2B1D2F21D3C1EE800194A93 /* SAWGrid */,
@@ -382,6 +386,15 @@
 				A2DB0A5C1D2DEF3E00886B96 /* SAWBaseViewController.m */,
 			);
 			name = SAWBaseViewController;
+			sourceTree = "<group>";
+		};
+		F10322A71D57C5E3003676F5 /* SAWSpell */ = {
+			isa = PBXGroup;
+			children = (
+				F10322A41D57C5AC003676F5 /* SAWSpell.h */,
+				F10322A51D57C5AC003676F5 /* SAWSpell.m */,
+			);
+			name = SAWSpell;
 			sourceTree = "<group>";
 		};
 		F158C8491D3C3295009EA0EC /* SAWCombatViewController */ = {
@@ -537,6 +550,7 @@
 				F158C84C1D3C32ED009EA0EC /* SAWCombatViewController.m in Sources */,
 				A2DB0A5D1D2DEF3E00886B96 /* SAWBaseViewController.m in Sources */,
 				A2943E651D57B16F00CD483C /* SAWGem.m in Sources */,
+				F10322A61D57C5AC003676F5 /* SAWSpell.m in Sources */,
 				A2943E5E1D57B13E00CD483C /* SAWSpellBook.m in Sources */,
 				A2DB0A181D2DEA3400886B96 /* main.m in Sources */,
 				A2B1D2DF1D3C00E300194A93 /* SAWGameViewController.m in Sources */,

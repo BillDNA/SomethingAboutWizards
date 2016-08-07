@@ -11,6 +11,8 @@
 @interface SAWCombatViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *BackgroundImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *AnimationView;
+
 
 @end
 
@@ -20,6 +22,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.BackgroundImageView setImage:[UIImage imageNamed: @"CombatBackground_1"]];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(spellCast:)
+                                                 name:@"spellCast"
+                                                    object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,6 +34,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)spellCast:(NSNotification*)note{
+    NSLog(@"Spell cast!");
+    //[self.AnimationView ]
+    
+    //+ (void)animateWithDuration:(NSTimeInterval)duration
+    //    animations:(void (^)(void))animations
+
+    
+}
 /*
 #pragma mark - Navigation
 
