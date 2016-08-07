@@ -40,12 +40,21 @@
 
 - (void)spellCast:(NSNotification*)note{
     NSLog(@"Spell cast %d!",((SAWSpell *)note.object).school);
-    //[self.AnimationView ]
-    
-    //+ (void)animateWithDuration:(NSTimeInterval)duration
-    //    animations:(void (^)(void))animations
 
+    [self.AnimationView setImage: [UIImage imageNamed:[NSString stringWithFormat:@"temp_spellcast_%d",((SAWSpell *)note.object).school]]];
+
+    self.AnimationView.alpha = 1;
+
+    [self.view layoutIfNeeded];
     
+    [UIView animateWithDuration:.6 delay:.4 options:UIViewAnimationOptionCurveLinear animations:^{
+        self.AnimationView.alpha = 0;
+        [self.view layoutIfNeeded];
+
+    } completion:^(BOOL finished) {
+        
+    }];
+
 }
 /*
 #pragma mark - Navigation

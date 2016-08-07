@@ -33,6 +33,7 @@
 		A2DB0A611D2DF41100886B96 /* SAWMaseterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB0A601D2DF41100886B96 /* SAWMaseterViewController.m */; };
 		F10322A61D57C5AC003676F5 /* SAWSpell.m in Sources */ = {isa = PBXBuildFile; fileRef = F10322A51D57C5AC003676F5 /* SAWSpell.m */; };
 		F158C84C1D3C32ED009EA0EC /* SAWCombatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F158C84B1D3C32ED009EA0EC /* SAWCombatViewController.m */; };
+		F1E1F84B1D57DF2400F266B2 /* UIImage+SAW.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E1F84A1D57DF2400F266B2 /* UIImage+SAW.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,8 @@
 		F10322A51D57C5AC003676F5 /* SAWSpell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWSpell.m; sourceTree = "<group>"; };
 		F158C84A1D3C32ED009EA0EC /* SAWCombatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWCombatViewController.h; sourceTree = "<group>"; };
 		F158C84B1D3C32ED009EA0EC /* SAWCombatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWCombatViewController.m; sourceTree = "<group>"; };
+		F1E1F8491D57DF2400F266B2 /* UIImage+SAW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SAW.h"; sourceTree = "<group>"; };
+		F1E1F84A1D57DF2400F266B2 /* UIImage+SAW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SAW.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,6 +390,8 @@
 			children = (
 				A2DB0A561D2DEE4F00886B96 /* UIColor+SAW.h */,
 				A2DB0A571D2DEE4F00886B96 /* UIColor+SAW.m */,
+				F1E1F8491D57DF2400F266B2 /* UIImage+SAW.h */,
+				F1E1F84A1D57DF2400F266B2 /* UIImage+SAW.m */,
 			);
 			name = Extentions;
 			sourceTree = "<group>";
@@ -577,6 +582,7 @@
 				A2DB0A5D1D2DEF3E00886B96 /* SAWBaseViewController.m in Sources */,
 				A2943E651D57B16F00CD483C /* SAWGem.m in Sources */,
 				F10322A61D57C5AC003676F5 /* SAWSpell.m in Sources */,
+				F1E1F84B1D57DF2400F266B2 /* UIImage+SAW.m in Sources */,
 				A2943E5E1D57B13E00CD483C /* SAWSpellBook.m in Sources */,
 				A2943E6D1D57D96E00CD483C /* SAWMissleSpell.m in Sources */,
 				A2DB0A181D2DEA3400886B96 /* main.m in Sources */,
