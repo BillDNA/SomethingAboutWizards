@@ -10,7 +10,8 @@
 #import "SAWGemView.h"
 #import "SAWGrid.h"
 #import "SAWGem.h"
-
+#import "SAWSpell.h"
+#import "SAWNotificationNames.h"
 @interface SAWGemBoardViewController () <SAWGemViewDataSource, SAWGemViewDelegate>
 #pragma mark - Views
 @property (strong, nonatomic) SAWGrid *gemViews;
@@ -112,6 +113,11 @@
 -(void)didTapGemView:(SAWGemView *)sender {
     SAWGem *gem = [self.gems objectAtX:sender.x Y:sender.y Z:sender.z];
     gem.curentState = abs((int)gem.curentState - 1);
+    if (gem.curentState == selectedGem) {
+        SAWSpell *spell = [[SAWSpell alloc] init];
+        spell.school = gem.school;
+        [[NSNotificationCenter defaultCenter] postNotificationName:NOTE_SPELL_WAS_CAST object:spell userInfo:nil];
+    }
 }
 #pragma mark - Target Action Mehtods
 

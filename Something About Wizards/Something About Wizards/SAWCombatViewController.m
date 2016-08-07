@@ -7,6 +7,9 @@
 //
 
 #import "SAWCombatViewController.h"
+#import "SAWNotificationNames.h"
+#import "SAWEnums.h"
+#import "SAWSpell.h"
 
 @interface SAWCombatViewController ()
 
@@ -25,7 +28,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(spellCast:)
-                                                 name:@"spellCast"
+                                                 name:NOTE_SPELL_WAS_CAST
                                                     object:nil];
 }
 
@@ -36,7 +39,7 @@
 
 
 - (void)spellCast:(NSNotification*)note{
-    NSLog(@"Spell cast!");
+    NSLog(@"Spell cast %d!",((SAWSpell *)note.object).school);
     //[self.AnimationView ]
     
     //+ (void)animateWithDuration:(NSTimeInterval)duration

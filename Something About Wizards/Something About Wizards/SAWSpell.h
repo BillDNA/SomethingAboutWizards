@@ -7,7 +7,8 @@
 //
 
 #import "SAWBaseModel.h"
-
+#import "SAWEnums.h"
 @interface SAWSpell : SAWBaseModel
 
+@property (nonatomic) schoolOfMagic school;
 @end
