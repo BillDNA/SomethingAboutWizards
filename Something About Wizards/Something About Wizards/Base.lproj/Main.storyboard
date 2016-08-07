@@ -250,7 +250,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="284"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VaN-D3-WTE" userLabel="Animation View">
-                                <rect key="frame" x="0.0" y="-1" width="320" height="285"/>
+                                <rect key="frame" x="16" y="14" width="288" height="255"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -259,8 +259,8 @@
                             <constraint firstItem="Pv9-Da-Msd" firstAttribute="height" secondItem="Xp9-Qp-RCh" secondAttribute="height" id="I3p-K2-Pzt"/>
                             <constraint firstItem="VaN-D3-WTE" firstAttribute="centerY" secondItem="Xp9-Qp-RCh" secondAttribute="centerY" id="J9p-Ao-igy"/>
                             <constraint firstItem="Pv9-Da-Msd" firstAttribute="centerX" secondItem="Xp9-Qp-RCh" secondAttribute="centerX" id="TxD-ce-HLi"/>
-                            <constraint firstItem="VaN-D3-WTE" firstAttribute="height" secondItem="Xp9-Qp-RCh" secondAttribute="height" id="a7r-sC-D2u"/>
-                            <constraint firstItem="VaN-D3-WTE" firstAttribute="width" secondItem="Xp9-Qp-RCh" secondAttribute="width" id="bFS-ha-S9O"/>
+                            <constraint firstItem="VaN-D3-WTE" firstAttribute="height" secondItem="Xp9-Qp-RCh" secondAttribute="height" multiplier="0.9" id="a7r-sC-D2u"/>
+                            <constraint firstItem="VaN-D3-WTE" firstAttribute="width" secondItem="Xp9-Qp-RCh" secondAttribute="width" multiplier="0.9" id="bFS-ha-S9O"/>
                             <constraint firstItem="Pv9-Da-Msd" firstAttribute="width" secondItem="Xp9-Qp-RCh" secondAttribute="width" id="f59-Pe-6Qk"/>
                             <constraint firstItem="VaN-D3-WTE" firstAttribute="centerX" secondItem="Xp9-Qp-RCh" secondAttribute="centerX" id="l0q-Jq-s8d"/>
                         </constraints>
