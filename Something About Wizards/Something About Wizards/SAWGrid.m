@@ -7,7 +7,7 @@
 //
 
 #import "SAWGrid.h"
-
+#import <UIKit/UIKit.h>
 @interface SAWGrid ()
 @property NSMutableArray *rows;
 
@@ -41,9 +41,25 @@
 - (id)objectInRow:(NSUInteger)row column:(NSUInteger)column {
     return [[self.rows objectAtIndex:row] objectAtIndex:column];
 }
+-(id)objectAtX:(NSInteger)x Y:(NSInteger)y Z:(NSInteger)z {
+    CGPoint rc = [self convertToRCFromX:x Y:y Z:z];
+    return  [self objectInRow:rc.x column:rc.y];
+}
 #pragma mark - setters
 - (void)setObject:(id)obj inRow:(NSUInteger)row column:(NSUInteger)column {
     [[self.rows objectAtIndex:row] replaceObjectAtIndex:column withObject:obj];
+}
+- (void)setObject:(id)obj AtX:(NSInteger)x Y:(NSInteger)y Z:(NSInteger)z {
+    CGPoint rc = [self convertToRCFromX:x Y:y Z:z];
+    [self setObject:obj inRow:rc.x column:rc.y];
+}
+#pragma mark - Helpers 
+-(CGPoint)convertToRCFromX:(NSInteger)x Y:(NSInteger)y Z:(NSInteger)z {
+    NSUInteger r = x + [self rowCount] / 2;
+    NSUInteger c = y + [self colCount] / 2;
+    
+    NSLog(@"(%d,%d) -> (%d,%d)",x,y,r,c);
+    return CGPointMake(r, c);
 }
 #pragma mark - debug 
 -(NSString *)description {

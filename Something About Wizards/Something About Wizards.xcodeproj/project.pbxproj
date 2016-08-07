@@ -60,6 +60,7 @@
 		A2943E631D57B16F00CD483C /* SAWGem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWGem.h; sourceTree = "<group>"; };
 		A2943E641D57B16F00CD483C /* SAWGem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWGem.m; sourceTree = "<group>"; };
 		A2943E661D57B40700CD483C /* SAWHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAWHelpers.h; sourceTree = "<group>"; };
+		A2943E681D57C2B400CD483C /* SAWNotificationNames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAWNotificationNames.h; sourceTree = "<group>"; };
 		A2B1D2CF1D3BFEA700194A93 /* SAWGemBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWGemBoardViewController.h; sourceTree = "<group>"; };
 		A2B1D2D01D3BFEA700194A93 /* SAWGemBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWGemBoardViewController.m; sourceTree = "<group>"; };
 		A2B1D2D21D3BFF0D00194A93 /* SAWBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWBaseView.h; sourceTree = "<group>"; };
@@ -338,6 +339,7 @@
 		A2DB0A4C1D2DEA7D00886B96 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A2943E681D57C2B400CD483C /* SAWNotificationNames.h */,
 				A26C2E741D503379003EF397 /* SAWEnums.h */,
 				A2943E661D57B40700CD483C /* SAWHelpers.h */,
 				A2DB0A4E1D2DED4000886B96 /* Extentions */,

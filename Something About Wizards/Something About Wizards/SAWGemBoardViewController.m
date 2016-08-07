@@ -60,10 +60,9 @@
     NSInteger X = 0;
     NSInteger Y = 0;
     for(NSInteger x = 0-self.boardRadius; x < self.boardRadius+1; x++) {
-        Y = 0;
+        Y = 0 + floor(ABS(x)/2);
         for(NSInteger y = 0-self.boardRadius + floor(ABS(x)/2); y < self.boardRadius+1 - (ceil(ABS(x)/2)) - (ABS(x)%2); y++) {
             NSInteger z = 0 - x - y;
-            
             CGFloat xOff = x * (0.75 * width);
             CGFloat yOff = y * height;
             if (ABS(x) % 2 == 1) {
@@ -88,7 +87,7 @@
     CGFloat width = 43;
     CGFloat height = sqrt(3.0)/2.0 * width;
     for(NSInteger x = 0-self.boardRadius; x < self.boardRadius+1; x++) {
-        Y = 0;
+        Y = 0 + floor(ABS(x)/2);
         for(NSInteger y = 0-self.boardRadius + floor(ABS(x)/2); y < self.boardRadius+1 - (ceil(ABS(x)/2)) - (ABS(x)%2); y++) {
             CGFloat xOff = x * (0.75 * width);
             CGFloat yOff = y * height;
@@ -106,13 +105,13 @@
 #pragma mark - Data Source Methods
 #pragma mark - SAW Gem View Data Source Methods
 -(SAWGem *)gemForSAWGemView:(SAWGemView *)sender {
-    return [self.gems objectInRow:(sender.x + floor([self.gems rowCount] / 2)) column:(sender.y+ floor([self.gems colCount] / 2))];
+    return [self.gems objectAtX:sender.x Y:sender.y Z:sender.z];
 }
 #pragma mark - Delegate Methods
 #pragma mark - SAW Gem View Delegate Methods
 -(void)didTapGemView:(SAWGemView *)sender {
-    SAWGem *gem = [self.gems objectInRow:(sender.x + floor([self.gems rowCount] / 2)) column:(sender.y+ floor([self.gems colCount] / 2))];
-    gem.curentState = ABS(gem.curentState - 1);
+    SAWGem *gem = [self.gems objectAtX:sender.x Y:sender.y Z:sender.z];
+    gem.curentState = abs((int)gem.curentState - 1);
 }
 #pragma mark - Target Action Mehtods
 

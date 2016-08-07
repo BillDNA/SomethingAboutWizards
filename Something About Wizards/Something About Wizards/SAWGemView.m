@@ -12,6 +12,7 @@
 @interface SAWGemView ()
 
 @property (weak, nonatomic) IBOutlet UIView *view;
+@property (weak, nonatomic) IBOutlet UILabel *debugLbl;
 @property (nonatomic) NSInteger x;
 @property (nonatomic) NSInteger y;
 @property (nonatomic) NSInteger z;
@@ -37,6 +38,7 @@
         self.x = x;
         self.y = y;
         self.z = z;
+        [self.debugLbl setText:[NSString stringWithFormat:@"(%ld,%ld,%ld)",x,y,z]];
     }
     return self;
 }
@@ -128,6 +130,10 @@
 - (IBAction)onTap:(UITapGestureRecognizer *)sender {
     [self.delegate didTapGemView:self];
     [self setNeedsDisplay];
+}
+#pragma mark - debug methods
+-(NSString *)description {
+    return [NSString stringWithFormat:@"SAWGemVie <%p> (%ld,%ld,%ld)",self,(long)self.x,(long)self.y,(long)self.z];
 }
 
 @end

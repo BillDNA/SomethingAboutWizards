@@ -89,14 +89,14 @@ typedef enum {
         self.backGroundAnimationA.alpha -= alphaShift;
         self.backGroundAnimationB.alpha += alphaShift;
         if (self.backGroundAnimationA.alpha <= 0) {
-            [self.backGroundAnimationA setImage:[UIImage imageNamed:[NSString stringWithFormat:@"temp_magic_back_ground_animation%d",self.bacgroundAnimationStep+1]]];
+            [self.backGroundAnimationA setImage:[UIImage imageNamed:[NSString stringWithFormat:@"temp_magic_back_ground_animation%ld",self.bacgroundAnimationStep+1]]];
             self.bacgroundAnimationStep = (self.bacgroundAnimationStep + 1) %BG_ANIMATION_MAX_STEP;
         }
     } else {
         self.backGroundAnimationA.alpha += alphaShift;
         self.backGroundAnimationB.alpha -= alphaShift;
         if (self.backGroundAnimationB.alpha <= 0) {
-            [self.backGroundAnimationB setImage:[UIImage imageNamed:[NSString stringWithFormat:@"temp_magic_back_ground_animation%d",self.bacgroundAnimationStep+1]]];
+            [self.backGroundAnimationB setImage:[UIImage imageNamed:[NSString stringWithFormat:@"temp_magic_back_ground_animation%ld",self.bacgroundAnimationStep+1]]];
             self.bacgroundAnimationStep = (self.bacgroundAnimationStep + 1) %BG_ANIMATION_MAX_STEP;
         }
     }
