@@ -15,4 +15,5 @@
 -(schoolOfMagic) school;
 @property (nonatomic) gemState curentState;
 
+-(id)initWithSchoolOfMagic:(schoolOfMagic)school;
 @end

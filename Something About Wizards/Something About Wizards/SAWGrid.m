@@ -58,12 +58,11 @@
     NSUInteger r = x + [self rowCount] / 2;
     NSUInteger c = y + [self colCount] / 2;
     
-    NSLog(@"(%d,%d) -> (%d,%d)",x,y,r,c);
     return CGPointMake(r, c);
 }
 #pragma mark - debug 
 -(NSString *)description {
-    NSString *s = [NSString stringWithFormat:@"SAWGrid <%p> (%d,%d)\n------------\n",self,self.rowCount,self.colCount];
+    NSString *s = [NSString stringWithFormat:@"SAWGrid <%p> (%ld,%ld)\n------------\n",self,self.rowCount,self.colCount];
     for (int r = 0; r < self.rowCount; r++) {
         for (int c = 0; c < self.colCount; c++) {
             NSObject *object = [self objectInRow:r column:c];

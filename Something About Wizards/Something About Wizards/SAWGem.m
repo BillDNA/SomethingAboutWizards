@@ -19,7 +19,15 @@
     self = [super init];
     if (self) {
         self.curentState = normalGem;
-        self.school = random_range(0,schoolOfMagicCount);
+        self.school = random_range(0,schoolsOfMagicCount);
+    }
+    return self;
+}
+-(id)initWithSchoolOfMagic:(schoolOfMagic)school {
+    self = [super init];
+    if (self) {
+        self.curentState = normalGem;
+        self.school = school;
     }
     return self;
 }

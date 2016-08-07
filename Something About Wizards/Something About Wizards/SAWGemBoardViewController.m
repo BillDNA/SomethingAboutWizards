@@ -15,9 +15,11 @@
 @interface SAWGemBoardViewController () <SAWGemViewDataSource, SAWGemViewDelegate>
 #pragma mark - Views
 @property (strong, nonatomic) SAWGrid *gemViews;
-@property (strong, nonatomic) SAWGrid *gems;
 
 #pragma mark - Models
+@property (strong, nonatomic) SAWGrid *gems;
+@property (strong, nonatomic) SAWGemView *selectedGemView;
+@property (nonatomic) CGPoint selectedGemLocation; //
 @property (nonatomic) NSInteger boardRadius;
 
 
@@ -114,9 +116,17 @@
     SAWGem *gem = [self.gems objectAtX:sender.x Y:sender.y Z:sender.z];
     gem.curentState = abs((int)gem.curentState - 1);
     if (gem.curentState == selectedGem) {
-        SAWSpell *spell = [[SAWSpell alloc] init];
-        spell.school = gem.school;
-        [[NSNotificationCenter defaultCenter] postNotificationName:NOTE_SPELL_WAS_CAST object:spell userInfo:nil];
+        if (self.selectedGemView == nil) {
+            self.selectedGemView = sender;
+        } else {
+            SAWGem *selectedGem = [self.gems objectAtX:self.selectedGemView.x Y:self.selectedGemView.y Z:self.selectedGemView.z];
+            [self.gems setObject:gem AtX:self.selectedGemView.x Y:self.selectedGemView.y Z:self.selectedGemView.z];
+            gem.curentState = normalGem;
+            [self.gems setObject:selectedGem AtX:sender.x Y:sender.y Z:sender.z];
+            selectedGem.curentState = normalGem;
+            [self.selectedGemView setNeedsDisplay];
+            self.selectedGemView = nil;
+        }
     }
 }
 #pragma mark - Target Action Mehtods
