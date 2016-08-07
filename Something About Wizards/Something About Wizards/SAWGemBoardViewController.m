@@ -9,12 +9,16 @@
 #import "SAWGemBoardViewController.h"
 #import "SAWGemView.h"
 #import "SAWGrid.h"
-@interface SAWGemBoardViewController ()
+#import "SAWGem.h"
+
+@interface SAWGemBoardViewController () <SAWGemViewDataSource, SAWGemViewDelegate>
 #pragma mark - Views
 @property (strong, nonatomic) SAWGrid *gemViews;
+@property (strong, nonatomic) SAWGrid *gems;
 
 #pragma mark - Models
 @property (nonatomic) NSInteger boardRadius;
+
 
 @end
 
@@ -38,7 +42,16 @@
     }
     return  _gemViews;
 }
+-(SAWGrid *)gems {
+    if (_gems == nil) {
+        _gems = [[SAWGrid alloc] initWithRows:[self gridRowsCount] columns:[self gridColumsCount]];
+    }
+    return _gems;
+}
 #pragma mark - Controller Life Cycle Methods
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+}
 -(void) viewWillAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     CGFloat width = 100.0;
@@ -56,10 +69,12 @@
             if (ABS(x) % 2 == 1) {
                 yOff += height/2.0;
             }
+            [self.gems setObject:[[SAWGem alloc] init] inRow:X column:Y];
             SAWGemView *gv = [[SAWGemView alloc] initWithFrame:CGRectMake(center.x + xOff - width/2.0, center.y + yOff - height / 2.0,width,height) andCoridinatesX:x Y:y Z:z ];
-            
             [self.view addSubview:gv];
             [self.gemViews setObject:gv inRow:X column:Y];
+            gv.dataSource = self;
+            gv.delegate = self;
             Y++;
         }
         X++;
@@ -89,7 +104,16 @@
     }
 }
 #pragma mark - Data Source Methods
+#pragma mark - SAW Gem View Data Source Methods
+-(SAWGem *)gemForSAWGemView:(SAWGemView *)sender {
+    return [self.gems objectInRow:(sender.x + floor([self.gems rowCount] / 2)) column:(sender.y+ floor([self.gems colCount] / 2))];
+}
 #pragma mark - Delegate Methods
+#pragma mark - SAW Gem View Delegate Methods
+-(void)didTapGemView:(SAWGemView *)sender {
+    SAWGem *gem = [self.gems objectInRow:(sender.x + floor([self.gems rowCount] / 2)) column:(sender.y+ floor([self.gems colCount] / 2))];
+    gem.curentState = ABS(gem.curentState - 1);
+}
 #pragma mark - Target Action Mehtods
 
 @end

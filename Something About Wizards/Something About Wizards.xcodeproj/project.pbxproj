@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A26C2E781D5570C4003EF397 /* SAWSpellBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A26C2E771D5570C4003EF397 /* SAWSpellBookViewController.m */; };
+		A2943E5E1D57B13E00CD483C /* SAWSpellBook.m in Sources */ = {isa = PBXBuildFile; fileRef = A2943E5D1D57B13E00CD483C /* SAWSpellBook.m */; };
+		A2943E611D57B14C00CD483C /* SAWSpellPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A2943E601D57B14C00CD483C /* SAWSpellPage.m */; };
+		A2943E651D57B16F00CD483C /* SAWGem.m in Sources */ = {isa = PBXBuildFile; fileRef = A2943E641D57B16F00CD483C /* SAWGem.m */; };
 		A2B1D2D11D3BFEA700194A93 /* SAWGemBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1D2D01D3BFEA700194A93 /* SAWGemBoardViewController.m */; };
 		A2B1D2D41D3BFF0D00194A93 /* SAWBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1D2D31D3BFF0D00194A93 /* SAWBaseView.m */; };
 		A2B1D2D81D3BFF9800194A93 /* SAWGemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1D2D71D3BFF9800194A93 /* SAWGemView.m */; };
@@ -47,6 +51,15 @@
 
 /* Begin PBXFileReference section */
 		A26C2E741D503379003EF397 /* SAWEnums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAWEnums.h; sourceTree = "<group>"; };
+		A26C2E761D5570C4003EF397 /* SAWSpellBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWSpellBookViewController.h; sourceTree = "<group>"; };
+		A26C2E771D5570C4003EF397 /* SAWSpellBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWSpellBookViewController.m; sourceTree = "<group>"; };
+		A2943E5C1D57B13E00CD483C /* SAWSpellBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWSpellBook.h; sourceTree = "<group>"; };
+		A2943E5D1D57B13E00CD483C /* SAWSpellBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWSpellBook.m; sourceTree = "<group>"; };
+		A2943E5F1D57B14C00CD483C /* SAWSpellPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWSpellPage.h; sourceTree = "<group>"; };
+		A2943E601D57B14C00CD483C /* SAWSpellPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWSpellPage.m; sourceTree = "<group>"; };
+		A2943E631D57B16F00CD483C /* SAWGem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWGem.h; sourceTree = "<group>"; };
+		A2943E641D57B16F00CD483C /* SAWGem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWGem.m; sourceTree = "<group>"; };
+		A2943E661D57B40700CD483C /* SAWHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAWHelpers.h; sourceTree = "<group>"; };
 		A2B1D2CF1D3BFEA700194A93 /* SAWGemBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWGemBoardViewController.h; sourceTree = "<group>"; };
 		A2B1D2D01D3BFEA700194A93 /* SAWGemBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWGemBoardViewController.m; sourceTree = "<group>"; };
 		A2B1D2D21D3BFF0D00194A93 /* SAWBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWBaseView.h; sourceTree = "<group>"; };
@@ -111,6 +124,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A26C2E751D557070003EF397 /* SAWSpellBookViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A26C2E761D5570C4003EF397 /* SAWSpellBookViewController.h */,
+				A26C2E771D5570C4003EF397 /* SAWSpellBookViewController.m */,
+			);
+			name = SAWSpellBookViewController;
+			sourceTree = "<group>";
+		};
+		A2943E5A1D57AF9D00CD483C /* SAWSpellBook */ = {
+			isa = PBXGroup;
+			children = (
+				A2943E5B1D57AFAB00CD483C /* SAWSpellPage */,
+				A2943E5C1D57B13E00CD483C /* SAWSpellBook.h */,
+				A2943E5D1D57B13E00CD483C /* SAWSpellBook.m */,
+			);
+			name = SAWSpellBook;
+			sourceTree = "<group>";
+		};
+		A2943E5B1D57AFAB00CD483C /* SAWSpellPage */ = {
+			isa = PBXGroup;
+			children = (
+				A2943E5F1D57B14C00CD483C /* SAWSpellPage.h */,
+				A2943E601D57B14C00CD483C /* SAWSpellPage.m */,
+			);
+			name = SAWSpellPage;
+			sourceTree = "<group>";
+		};
+		A2943E621D57B15E00CD483C /* SAWGem */ = {
+			isa = PBXGroup;
+			children = (
+				A2943E631D57B16F00CD483C /* SAWGem.h */,
+				A2943E641D57B16F00CD483C /* SAWGem.m */,
+			);
+			name = SAWGem;
+			sourceTree = "<group>";
+		};
 		A2B1D2CE1D3BFE8400194A93 /* SAWGemBoardViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,8 +185,8 @@
 			children = (
 				A2B1D2DD1D3C00E300194A93 /* SAWGameViewController.h */,
 				A2B1D2DE1D3C00E300194A93 /* SAWGameViewController.m */,
+				A26C2E751D557070003EF397 /* SAWSpellBookViewController */,
 				A2B1D2CE1D3BFE8400194A93 /* SAWGemBoardViewController */,
-				A2B1D2E01D3C014700194A93 /* SAWMenuViewController */,
 			);
 			name = SAWGameViewController;
 			sourceTree = "<group>";
@@ -256,6 +306,8 @@
 		A2DB0A491D2DEA7000886B96 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A2943E621D57B15E00CD483C /* SAWGem */,
+				A2943E5A1D57AF9D00CD483C /* SAWSpellBook */,
 				A2B1D2F21D3C1EE800194A93 /* SAWGrid */,
 				A2B1D2EE1D3C1EB300194A93 /* SAWBaseModel */,
 			);
@@ -287,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				A26C2E741D503379003EF397 /* SAWEnums.h */,
+				A2943E661D57B40700CD483C /* SAWHelpers.h */,
 				A2DB0A4E1D2DED4000886B96 /* Extentions */,
 			);
 			name = "Supporting Files";
@@ -315,6 +368,7 @@
 			children = (
 				A2DB0A5F1D2DF41100886B96 /* SAWMaseterViewController.h */,
 				A2DB0A601D2DF41100886B96 /* SAWMaseterViewController.m */,
+				A2B1D2E01D3C014700194A93 /* SAWMenuViewController */,
 				A2B1D2DC1D3C00C100194A93 /* SAWStoryViewController */,
 				A2B1D2DB1D3C009100194A93 /* SAWGameViewController */,
 			);
@@ -472,14 +526,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2B1D2ED1D3C1E3C00194A93 /* SAWGrid.m in Sources */,
+				A2943E611D57B14C00CD483C /* SAWSpellPage.m in Sources */,
 				A2B1D2D41D3BFF0D00194A93 /* SAWBaseView.m in Sources */,
 				A2DB0A1B1D2DEA3400886B96 /* AppDelegate.m in Sources */,
 				A2B1D2D11D3BFEA700194A93 /* SAWGemBoardViewController.m in Sources */,
+				A26C2E781D5570C4003EF397 /* SAWSpellBookViewController.m in Sources */,
 				A2DB0A611D2DF41100886B96 /* SAWMaseterViewController.m in Sources */,
 				A2B1D2D81D3BFF9800194A93 /* SAWGemView.m in Sources */,
 				A2B1D2F11D3C1EC900194A93 /* SAWBaseModel.m in Sources */,
 				F158C84C1D3C32ED009EA0EC /* SAWCombatViewController.m in Sources */,
 				A2DB0A5D1D2DEF3E00886B96 /* SAWBaseViewController.m in Sources */,
+				A2943E651D57B16F00CD483C /* SAWGem.m in Sources */,
+				A2943E5E1D57B13E00CD483C /* SAWSpellBook.m in Sources */,
 				A2DB0A181D2DEA3400886B96 /* main.m in Sources */,
 				A2B1D2DF1D3C00E300194A93 /* SAWGameViewController.m in Sources */,
 				A2B1D2E41D3C025F00194A93 /* SAWStoryViewController.m in Sources */,

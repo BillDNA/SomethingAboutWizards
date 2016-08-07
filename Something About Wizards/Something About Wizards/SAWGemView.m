@@ -19,7 +19,7 @@
 @implementation SAWGemView
 #pragma mark - getters and setters
 -(UIColor *)borderColor {
-    if (self.isSelected) {
+    if ([self.dataSource gemForSAWGemView:self].curentState == selectedGem) {
         return [UIColor gemBorderColorGivenState:selectedGem];
     }
     return  [UIColor gemBorderColorGivenState:normalGem];
@@ -37,35 +37,39 @@
         self.x = x;
         self.y = y;
         self.z = z;
-        self.school = (5 + x + y) % 5;
     }
     return self;
 }
 #pragma mark - update / animation methods
 -(void) drawRect: (CGRect) rect {
+    SAWGem *gem = [self.dataSource gemForSAWGemView:self];
     CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    UIColor * gemColor = [UIColor gemColorGivenSchoolOfMagic:self.school];
-    
-    CGMutablePathRef path = CGPathCreateMutable();
-    CGPoint center = CGPointMake(rect.size.width / 2, rect.size.height / 2);
-    CGFloat radius = rect.size.width / 2 - 1;
-    CGPoint corner = [self getHexCornerPointFromCenter:center toPointIndexed:0 withRadius:radius];
-    CGPathMoveToPoint(path, NULL, corner.x, corner.y);
-    for (int i = 1; i < 6; i++) {
-        corner = [self getHexCornerPointFromCenter:center toPointIndexed:i withRadius:radius];
-        CGPathAddLineToPoint(path, NULL, corner.x, corner.y);
+    if (![gem isKindOfClass:[NSNull class]]) {
+        
+        UIColor * gemColor = [UIColor gemColorGivenSchoolOfMagic:gem.school];
+        
+        CGMutablePathRef path = CGPathCreateMutable();
+        CGPoint center = CGPointMake(rect.size.width / 2, rect.size.height / 2);
+        CGFloat radius = rect.size.width / 2 - 1;
+        CGPoint corner = [self getHexCornerPointFromCenter:center toPointIndexed:0 withRadius:radius];
+        CGPathMoveToPoint(path, NULL, corner.x, corner.y);
+        for (int i = 1; i < 6; i++) {
+            corner = [self getHexCornerPointFromCenter:center toPointIndexed:i withRadius:radius];
+            CGPathAddLineToPoint(path, NULL, corner.x, corner.y);
+        }
+        CGPathCloseSubpath(path);
+        
+        CGContextAddPath(context, path);
+        CGContextSetFillColorWithColor(context, gemColor.CGColor);
+        CGContextFillPath(context);
+        
+        CGContextAddPath(context, path);
+        CGContextSetStrokeColorWithColor(context, [self borderColor].CGColor);
+        CGContextSetLineWidth(context, 2.0);
+        CGContextStrokePath (context);
+    } else {
+        CGContextClearRect(context, self.bounds);
     }
-    CGPathCloseSubpath(path);
-    
-    CGContextAddPath(context, path);
-    CGContextSetFillColorWithColor(context, gemColor.CGColor);
-    CGContextFillPath(context);
-    
-    CGContextAddPath(context, path);
-    CGContextSetStrokeColorWithColor(context, [self borderColor].CGColor);
-    CGContextSetLineWidth(context, 2.0);
-    CGContextStrokePath (context);
 
     
 }
@@ -122,7 +126,7 @@
     return hitView;
 }
 - (IBAction)onTap:(UITapGestureRecognizer *)sender {
-    self.isSelected = !self.isSelected;
+    [self.delegate didTapGemView:self];
     [self setNeedsDisplay];
 }
 

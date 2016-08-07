@@ -12,7 +12,8 @@
 
 @interface SAWGrid : SAWBaseModel
 
-@property NSMutableArray *rows;
+-(NSInteger)rowCount;
+-(NSInteger)colCount;
 
 - initWithRows:(NSUInteger)rows columns:(NSUInteger)columns;
 - objectInRow:(NSUInteger)row column:(NSUInteger)column;

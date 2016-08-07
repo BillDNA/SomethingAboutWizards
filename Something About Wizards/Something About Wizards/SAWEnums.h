@@ -15,6 +15,7 @@
 typedef enum {
     normalGem,
     selectedGem,
+    gemStateCount //this will always give you the total number of posible stated
 } gemState;
 
 typedef enum {
@@ -22,5 +23,6 @@ typedef enum {
     NatureMagic,
     BloodMagic,
     DevineMagic,
-    ArcanineMagic    
+    ArcanineMagic,
+    schoolOfMagicCount //this will alway give you the total number of posible schools of magic
 } schoolOfMagic;

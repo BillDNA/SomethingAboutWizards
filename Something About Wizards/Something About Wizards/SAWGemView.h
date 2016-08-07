@@ -8,10 +8,23 @@
 
 #import "SAWBaseView.h"
 #import "SAWEnums.h"
+#import "SAWGem.h"
+@class SAWGemView;
+@protocol SAWGemViewDataSource
+-(SAWGem *)gemForSAWGemView:(SAWGemView *)sender;
+@end
+@protocol SAWGemViewDelegate
+-(void)didTapGemView:(SAWGemView *)sender;
 
+@end
 @interface SAWGemView : SAWBaseView
-@property (nonatomic) schoolOfMagic school;
-@property (nonatomic) BOOL isSelected;
+@property (weak, nonatomic) id<SAWGemViewDataSource> dataSource;
+@property (weak, nonatomic) id<SAWGemViewDelegate> delegate;
+
+
+-(NSInteger)x;
+-(NSInteger)y;
+-(NSInteger)z;
 
 -(id)initWithFrame:(CGRect)frame andCoridinatesX:(NSInteger)x Y:(NSInteger)y Z:(NSInteger)z;
 @end
