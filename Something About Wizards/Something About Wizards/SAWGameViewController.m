@@ -9,12 +9,15 @@
 #import "SAWGameViewController.h"
 #import "SAWSpellBookViewController.h"
 #import "SAWGemBoardViewController.h"
+#import "SAWGrid.h"
+#import "SAWSpellBook.h"
+#import "SAWSpell.h"
 #define BG_ANIMATION_MAX_STEP 18
 typedef enum {
     showGemBoard,
     showSpellBook
 } showingState;
-@interface SAWGameViewController ()
+@interface SAWGameViewController () <SAWGemBoardViewControllerDelegate>
 #pragma mark - Views
 @property (weak, nonatomic) IBOutlet UIImageView *backGroundAnimationA;
 @property (weak, nonatomic) IBOutlet UIImageView *backGroundAnimationB;
@@ -62,6 +65,7 @@ typedef enum {
     for (UIViewController *vc in self.childViewControllers) {
         if ([vc isKindOfClass:[SAWGemBoardViewController class]]) {
             self.gemBoard = (SAWGemBoardViewController *)vc;
+            self.gemBoard.delegate = self;
         } else if ([vc isKindOfClass:[SAWSpellBookViewController class]]) {
             self.spellBook =(SAWSpellBookViewController *)vc;
         }
@@ -103,6 +107,56 @@ typedef enum {
 }
 #pragma mark - Data Source Methods
 #pragma mark - Delegate Methods
+#pragma makr - SAW Gem Board Delegate Methods 
+-(void)didSwapGems {
+    SAWGrid *gems = self.gemBoard.gems;
+    SAWSpellBook *book = self.spellBook.book;
+    for (SAWSpell *spell in book.spells) {
+        for(NSInteger r = 0; r < gems.rowCount; r++) {
+            for(NSInteger c = 0; c < gems.colCount;c++) {
+                SAWGem *gem = [gems objectInRow:r column:c];
+                if (![gem isKindOfClass:[NSNull class]]) {
+                    SAWGrid *pattern = spell.patern;
+                    BOOL isMatch = YES;
+                    for(NSInteger pr = 0; pr < pattern.rowCount; pr++) {
+                        for(NSInteger pc = 0; pc < pattern.colCount; pc++) {
+                            SAWGem *patternGem = [pattern objectInRow:pr column:pc];
+                             if (![patternGem isKindOfClass:[NSNull class]]) {
+                                 NSInteger row = r + pr;
+                                 NSInteger col = c + pc;
+                                 if (row >= gems.rowCount || col >= gems.colCount) {
+                                     isMatch = isMatch && NO;
+                                 } else {
+                                     SAWGem *checkGem = [gems objectInRow:row column:col];
+                                     if ([checkGem isKindOfClass:[NSNull class]]) {
+                                         isMatch = isMatch && NO;
+                                     } else {
+                                         isMatch = isMatch && (patternGem.school == checkGem.school);
+                                     }
+                                 }
+                             } else {
+                                 isMatch = isMatch && YES;
+                             }
+                        } //pc loop
+                    } //pr loop
+                    if (isMatch) {
+                        for(NSInteger pr = 0; pr < pattern.rowCount; pr++) {
+                            for(NSInteger pc = 0; pc < pattern.colCount; pc++) {
+                                NSInteger row = r + pr;
+                                NSInteger col = c + pc;
+                                if (row < gems.rowCount && col < gems.colCount)  {
+                                    NSLog(@"poping (%ld,%ld)",row,col);
+                                    [gems setObject:[NSNull null] inRow:row column:col];
+                                }
+                            }
+                        }
+                    }
+                } // gem null check
+            }// c loop
+        } //r loop
+    } // spell loop
+    [self.gemBoard updateGems:gems];
+}
 #pragma mark - Target Action Mehtods
 - (IBAction)onSpellbookIcon:(id)sender {
     if (self.currentlyShowing == showSpellBook) {

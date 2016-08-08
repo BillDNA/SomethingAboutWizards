@@ -42,7 +42,6 @@
         CGFloat height = sqrt(3.0)/2.0 * width;
         for(NSInteger X = 0; X < [self.currentSpell rowSize]; X++) {
             for(NSInteger Y = 0; Y < [self.currentSpell colSize]; Y++) {
-                NSLog(@"(%d,%d)",X,Y);
                 NSInteger x = X-floor([self.currentSpell rowSize]/2.0);
                 NSInteger y = Y-floor([self.currentSpell colSize]/2.0) + floor(ABS(x)/2);
                 NSInteger z = 0 - x - y;

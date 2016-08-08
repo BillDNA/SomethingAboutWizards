@@ -8,7 +8,6 @@
 
 #import "SAWGemBoardViewController.h"
 #import "SAWGemView.h"
-#import "SAWGrid.h"
 #import "SAWGem.h"
 #import "SAWSpell.h"
 #import "SAWNotificationNames.h"
@@ -105,6 +104,24 @@
         X++;
     }
 }
+-(void)updateGems:(SAWGrid *)newGems {
+    self.gems = newGems;
+    for(NSInteger row = 0; row < [self.gemViews rowCount]; row ++) {
+        for(NSInteger col = 0; col < [self.gemViews colCount]; col ++) {
+            NSLog(@"checking (%ld,%ld)",row,col);
+            SAWGemView *gv = [self.gemViews objectInRow:row column:col];
+            if (![gv isKindOfClass:[NSNull class]]) {
+                SAWGem *gem = [self.gems objectInRow:row column:col];
+                if ([gem isKindOfClass:[NSNull class]]) {
+                    NSLog(@"removing view (%ld,%ld)",row,col);
+                    [gv removeFromSuperview];
+                }  else {
+                    [gv setNeedsDisplay];
+                }
+            }
+        }
+    }
+}
 #pragma mark - Data Source Methods
 #pragma mark - SAW Gem View Data Source Methods
 -(SAWGem *)gemForSAWGemView:(SAWGemView *)sender {
@@ -126,6 +143,7 @@
             selectedGem.curentState = normalGem;
             [self.selectedGemView setNeedsDisplay];
             self.selectedGemView = nil;
+            [self.delegate didSwapGems];
         }
     }
 }

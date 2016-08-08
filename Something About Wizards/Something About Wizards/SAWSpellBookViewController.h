@@ -7,7 +7,7 @@
 //
 
 #import "SAWBaseViewController.h"
-
+#import "SAWSpellBook.h"
 @interface SAWSpellBookViewController : SAWBaseViewController
-
+-(SAWSpellBook *)book;
 @end

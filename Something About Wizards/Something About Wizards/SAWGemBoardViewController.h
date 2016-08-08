@@ -7,7 +7,13 @@
 //
 
 #import "SAWBaseViewController.h"
-
+#import "SAWGrid.h"
+@class SAWGemBoardViewController;
+@protocol SAWGemBoardViewControllerDelegate
+-(void)didSwapGems;
+@end
 @interface SAWGemBoardViewController : SAWBaseViewController
-
+@property (weak, nonatomic) id<SAWGemBoardViewControllerDelegate> delegate;
+-(SAWGrid *)gems;
+-(void)updateGems:(SAWGrid *)newGems;
 @end
