@@ -12,4 +12,4 @@
 
 #endif /* SAWHelpers_h */
 
-static inline int random_range(int low, int high){ return (random()%(high-low+1))+low;}
+static inline int random_range(int low, int high){ return (low + arc4random() % (high - low));}

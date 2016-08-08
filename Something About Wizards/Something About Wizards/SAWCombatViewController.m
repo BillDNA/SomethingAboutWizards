@@ -54,7 +54,7 @@
 
     [self.view layoutIfNeeded];
     
-    [UIView animateWithDuration:.5 delay:.5 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:0.5 delay:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
         self.AnimationView.alpha = 0;
         [self.view layoutIfNeeded];
 
