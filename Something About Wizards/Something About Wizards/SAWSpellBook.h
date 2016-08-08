@@ -10,4 +10,7 @@
 
 @interface SAWSpellBook : SAWBaseModel
 
+
+-(NSArray *)spells;
+
 @end

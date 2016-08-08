@@ -308,19 +308,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp_spellbook_page" translatesAutoresizingMaskIntoConstraints="NO" id="gOg-3Y-YId">
-                                <rect key="frame" x="0.0" y="24" width="320" height="240"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="gOg-3Y-YId" secondAttribute="height" multiplier="1024:768" id="YFX-Zg-1av"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvD-kO-AVv" customClass="SAWSpellPageView">
+                                <rect key="frame" x="32" y="26" width="256" height="212"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPo-in-x6E">
+                                <rect key="frame" x="272" y="226" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="onNext:" destination="TSW-5h-kkS" eventType="touchUpInside" id="0bd-lT-F93"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrV-CY-y6M">
+                                <rect key="frame" x="16" y="226" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="onPrevious:" destination="TSW-5h-kkS" eventType="touchUpInside" id="1gK-7Z-bQx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="lvD-kO-AVv" firstAttribute="centerY" secondItem="gOg-3Y-YId" secondAttribute="centerY" id="HBS-Au-G7N"/>
+                            <constraint firstItem="Bmq-0q-Ch4" firstAttribute="top" secondItem="OrV-CY-y6M" secondAttribute="bottom" constant="8" id="JWD-2a-VdB"/>
                             <constraint firstItem="Bmq-0q-Ch4" firstAttribute="top" secondItem="gOg-3Y-YId" secondAttribute="bottom" id="MWO-cT-Y6H"/>
+                            <constraint firstItem="lvD-kO-AVv" firstAttribute="centerX" secondItem="gOg-3Y-YId" secondAttribute="centerX" id="NLz-z9-BuD"/>
                             <constraint firstAttribute="leading" secondItem="gOg-3Y-YId" secondAttribute="leading" id="Nvc-8r-NlA"/>
+                            <constraint firstItem="lvD-kO-AVv" firstAttribute="height" secondItem="gOg-3Y-YId" secondAttribute="height" multiplier="0.8" id="OjR-l4-Ikx"/>
                             <constraint firstAttribute="trailing" secondItem="gOg-3Y-YId" secondAttribute="trailing" id="Rkl-Sd-LOm"/>
+                            <constraint firstItem="lvD-kO-AVv" firstAttribute="width" secondItem="gOg-3Y-YId" secondAttribute="width" multiplier="0.8" id="WiZ-wo-ubg"/>
+                            <constraint firstItem="OrV-CY-y6M" firstAttribute="leading" secondItem="5e5-NY-Cuh" secondAttribute="leadingMargin" id="dch-Kp-5yG"/>
+                            <constraint firstItem="Bmq-0q-Ch4" firstAttribute="top" secondItem="gPo-in-x6E" secondAttribute="bottom" constant="8" id="j9M-Vg-Tm9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gPo-in-x6E" secondAttribute="trailing" id="kfC-8V-FFu"/>
+                            <constraint firstItem="gOg-3Y-YId" firstAttribute="top" secondItem="5hj-zK-7xA" secondAttribute="bottom" id="ucQ-a7-9aP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentPage" destination="lvD-kO-AVv" id="4ot-mD-hAZ"/>
+                        <outlet property="nextButton" destination="gPo-in-x6E" id="qoy-p1-z4T"/>
+                        <outlet property="previousButton" destination="OrV-CY-y6M" id="ZGd-mi-Okx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SoN-nE-QqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

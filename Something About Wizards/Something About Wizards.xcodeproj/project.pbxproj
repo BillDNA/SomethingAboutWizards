@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		A26C2E781D5570C4003EF397 /* SAWSpellBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A26C2E771D5570C4003EF397 /* SAWSpellBookViewController.m */; };
 		A2943E5E1D57B13E00CD483C /* SAWSpellBook.m in Sources */ = {isa = PBXBuildFile; fileRef = A2943E5D1D57B13E00CD483C /* SAWSpellBook.m */; };
-		A2943E611D57B14C00CD483C /* SAWSpellPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A2943E601D57B14C00CD483C /* SAWSpellPage.m */; };
 		A2943E651D57B16F00CD483C /* SAWGem.m in Sources */ = {isa = PBXBuildFile; fileRef = A2943E641D57B16F00CD483C /* SAWGem.m */; };
+		A2943E6D1D57D96E00CD483C /* SAWMissleSpell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2943E6C1D57D96E00CD483C /* SAWMissleSpell.m */; };
+		A2943E711D57E0B600CD483C /* SAWSpellPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2943E701D57E0B600CD483C /* SAWSpellPageView.m */; };
+		A2943E731D57E0C100CD483C /* SAWSpellPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2943E721D57E0C100CD483C /* SAWSpellPageView.xib */; };
 		A2B1D2D11D3BFEA700194A93 /* SAWGemBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1D2D01D3BFEA700194A93 /* SAWGemBoardViewController.m */; };
 		A2B1D2D41D3BFF0D00194A93 /* SAWBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1D2D31D3BFF0D00194A93 /* SAWBaseView.m */; };
 		A2B1D2D81D3BFF9800194A93 /* SAWGemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1D2D71D3BFF9800194A93 /* SAWGemView.m */; };
@@ -58,12 +60,15 @@
 		A26C2E771D5570C4003EF397 /* SAWSpellBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWSpellBookViewController.m; sourceTree = "<group>"; };
 		A2943E5C1D57B13E00CD483C /* SAWSpellBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWSpellBook.h; sourceTree = "<group>"; };
 		A2943E5D1D57B13E00CD483C /* SAWSpellBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWSpellBook.m; sourceTree = "<group>"; };
-		A2943E5F1D57B14C00CD483C /* SAWSpellPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWSpellPage.h; sourceTree = "<group>"; };
-		A2943E601D57B14C00CD483C /* SAWSpellPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWSpellPage.m; sourceTree = "<group>"; };
 		A2943E631D57B16F00CD483C /* SAWGem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWGem.h; sourceTree = "<group>"; };
 		A2943E641D57B16F00CD483C /* SAWGem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWGem.m; sourceTree = "<group>"; };
 		A2943E661D57B40700CD483C /* SAWHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAWHelpers.h; sourceTree = "<group>"; };
 		A2943E681D57C2B400CD483C /* SAWNotificationNames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAWNotificationNames.h; sourceTree = "<group>"; };
+		A2943E6B1D57D96E00CD483C /* SAWMissleSpell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWMissleSpell.h; sourceTree = "<group>"; };
+		A2943E6C1D57D96E00CD483C /* SAWMissleSpell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWMissleSpell.m; sourceTree = "<group>"; };
+		A2943E6F1D57E0B600CD483C /* SAWSpellPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWSpellPageView.h; sourceTree = "<group>"; };
+		A2943E701D57E0B600CD483C /* SAWSpellPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWSpellPageView.m; sourceTree = "<group>"; };
+		A2943E721D57E0C100CD483C /* SAWSpellPageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAWSpellPageView.xib; sourceTree = "<group>"; };
 		A2B1D2CF1D3BFEA700194A93 /* SAWGemBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWGemBoardViewController.h; sourceTree = "<group>"; };
 		A2B1D2D01D3BFEA700194A93 /* SAWGemBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWGemBoardViewController.m; sourceTree = "<group>"; };
 		A2B1D2D21D3BFF0D00194A93 /* SAWBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWBaseView.h; sourceTree = "<group>"; };
@@ -146,20 +151,10 @@
 		A2943E5A1D57AF9D00CD483C /* SAWSpellBook */ = {
 			isa = PBXGroup;
 			children = (
-				A2943E5B1D57AFAB00CD483C /* SAWSpellPage */,
 				A2943E5C1D57B13E00CD483C /* SAWSpellBook.h */,
 				A2943E5D1D57B13E00CD483C /* SAWSpellBook.m */,
 			);
 			name = SAWSpellBook;
-			sourceTree = "<group>";
-		};
-		A2943E5B1D57AFAB00CD483C /* SAWSpellPage */ = {
-			isa = PBXGroup;
-			children = (
-				A2943E5F1D57B14C00CD483C /* SAWSpellPage.h */,
-				A2943E601D57B14C00CD483C /* SAWSpellPage.m */,
-			);
-			name = SAWSpellPage;
 			sourceTree = "<group>";
 		};
 		A2943E621D57B15E00CD483C /* SAWGem */ = {
@@ -169,6 +164,32 @@
 				A2943E641D57B16F00CD483C /* SAWGem.m */,
 			);
 			name = SAWGem;
+			sourceTree = "<group>";
+		};
+		A2943E691D57D88000CD483C /* SAWBlastSpells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SAWBlastSpells;
+			sourceTree = "<group>";
+		};
+		A2943E6A1D57D88D00CD483C /* SAWMissleSpells */ = {
+			isa = PBXGroup;
+			children = (
+				A2943E6B1D57D96E00CD483C /* SAWMissleSpell.h */,
+				A2943E6C1D57D96E00CD483C /* SAWMissleSpell.m */,
+			);
+			name = SAWMissleSpells;
+			sourceTree = "<group>";
+		};
+		A2943E6E1D57E09D00CD483C /* Spells Page */ = {
+			isa = PBXGroup;
+			children = (
+				A2943E6F1D57E0B600CD483C /* SAWSpellPageView.h */,
+				A2943E701D57E0B600CD483C /* SAWSpellPageView.m */,
+				A2943E721D57E0C100CD483C /* SAWSpellPageView.xib */,
+			);
+			name = "Spells Page";
 			sourceTree = "<group>";
 		};
 		A2B1D2CE1D3BFE8400194A93 /* SAWGemBoardViewController */ = {
@@ -332,6 +353,7 @@
 				A2DB0A1F1D2DEA3400886B96 /* Main.storyboard */,
 				A2DB0A241D2DEA3400886B96 /* LaunchScreen.storyboard */,
 				A2B1D2E51D3C028100194A93 /* Story Views */,
+				A2943E6E1D57E09D00CD483C /* Spells Page */,
 				A2B1D2E61D3C028B00194A93 /* Game Views */,
 				A2DB0A4D1D2DEAA300886B96 /* SAWBaseView */,
 			);
@@ -402,6 +424,8 @@
 		F10322A71D57C5E3003676F5 /* SAWSpell */ = {
 			isa = PBXGroup;
 			children = (
+				A2943E6A1D57D88D00CD483C /* SAWMissleSpells */,
+				A2943E691D57D88000CD483C /* SAWBlastSpells */,
 				F10322A41D57C5AC003676F5 /* SAWSpell.h */,
 				F10322A51D57C5AC003676F5 /* SAWSpell.m */,
 			);
@@ -534,6 +558,7 @@
 				A2DB0A231D2DEA3400886B96 /* Assets.xcassets in Resources */,
 				A2B1D2DA1D3BFFA400194A93 /* SAWGemView.xib in Resources */,
 				A2DB0A211D2DEA3400886B96 /* Main.storyboard in Resources */,
+				A2943E731D57E0C100CD483C /* SAWSpellPageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,7 +584,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2B1D2ED1D3C1E3C00194A93 /* SAWGrid.m in Sources */,
-				A2943E611D57B14C00CD483C /* SAWSpellPage.m in Sources */,
 				A2B1D2D41D3BFF0D00194A93 /* SAWBaseView.m in Sources */,
 				A2DB0A1B1D2DEA3400886B96 /* AppDelegate.m in Sources */,
 				A2B1D2D11D3BFEA700194A93 /* SAWGemBoardViewController.m in Sources */,
@@ -573,7 +597,9 @@
 				F10322A61D57C5AC003676F5 /* SAWSpell.m in Sources */,
 				F1E1F84B1D57DF2400F266B2 /* UIImage+SAW.m in Sources */,
 				A2943E5E1D57B13E00CD483C /* SAWSpellBook.m in Sources */,
+				A2943E6D1D57D96E00CD483C /* SAWMissleSpell.m in Sources */,
 				A2DB0A181D2DEA3400886B96 /* main.m in Sources */,
+				A2943E711D57E0B600CD483C /* SAWSpellPageView.m in Sources */,
 				A2B1D2DF1D3C00E300194A93 /* SAWGameViewController.m in Sources */,
 				A2B1D2E41D3C025F00194A93 /* SAWStoryViewController.m in Sources */,
 				F1E1F84F1D58133A00F266B2 /* SAWScene.m in Sources */,

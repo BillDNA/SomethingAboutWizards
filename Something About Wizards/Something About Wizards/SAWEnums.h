@@ -17,12 +17,12 @@ typedef enum {
     selectedGem,
     gemStateCount //this will always give you the total number of posible stated
 } gemState;
-
+#define SCHOOL_NAMES @[@"Etherial",@"Nature",@"Blood",@"Devine",@"Aracne"]
 typedef enum {
     EtherealMagic,
     NatureMagic,
     BloodMagic,
     DevineMagic,
     ArcanineMagic,
-    schoolOfMagicCount //this will alway give you the total number of posible schools of magic
+    schoolsOfMagicCount //this will alway give you the total number of posible schools of magic
 } schoolOfMagic;

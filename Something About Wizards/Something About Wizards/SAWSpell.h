@@ -8,7 +8,17 @@
 
 #import "SAWBaseModel.h"
 #import "SAWEnums.h"
-@interface SAWSpell : SAWBaseModel
+#import "SAWGem.h"
+#import "SAWGrid.h"
+#import "SAWGemView.h"
+@interface SAWSpell : SAWBaseModel <SAWGemViewDataSource>
 
-@property (nonatomic) schoolOfMagic school;
+-(NSInteger)rowSize;
+-(NSInteger)colSize;
+
+-(schoolOfMagic) school;
+-(SAWGrid *)patern;
+
+-(NSString *)name;
+
 @end
