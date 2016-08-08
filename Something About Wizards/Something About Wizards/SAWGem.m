@@ -19,7 +19,7 @@
     self = [super init];
     if (self) {
         self.curentState = normalGem;
-        self.school = random_range(0,schoolsOfMagicCount);
+        self.school =  arc4random() % schoolsOfMagicCount;
     }
     return self;
 }

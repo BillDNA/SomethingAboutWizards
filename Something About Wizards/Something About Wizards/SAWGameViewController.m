@@ -12,6 +12,7 @@
 #import "SAWGrid.h"
 #import "SAWSpellBook.h"
 #import "SAWSpell.h"
+#import "SAWNotificationNames.h"
 #define BG_ANIMATION_MAX_STEP 18
 typedef enum {
     showGemBoard,
@@ -140,12 +141,12 @@ typedef enum {
                         } //pc loop
                     } //pr loop
                     if (isMatch) {
+                        [[NSNotificationCenter defaultCenter] postNotificationName:NOTE_SPELL_WAS_CAST object:spell userInfo:nil];
                         for(NSInteger pr = 0; pr < pattern.rowCount; pr++) {
                             for(NSInteger pc = 0; pc < pattern.colCount; pc++) {
                                 NSInteger row = r + pr;
                                 NSInteger col = c + pc;
                                 if (row < gems.rowCount && col < gems.colCount)  {
-                                    NSLog(@"poping (%ld,%ld)",row,col);
                                     [gems setObject:[NSNull null] inRow:row column:col];
                                 }
                             }

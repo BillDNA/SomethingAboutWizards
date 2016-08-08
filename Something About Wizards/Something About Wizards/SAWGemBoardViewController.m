@@ -108,17 +108,15 @@
     self.gems = newGems;
     for(NSInteger row = 0; row < [self.gemViews rowCount]; row ++) {
         for(NSInteger col = 0; col < [self.gemViews colCount]; col ++) {
-            NSLog(@"checking (%ld,%ld)",row,col);
             SAWGemView *gv = [self.gemViews objectInRow:row column:col];
-            if (![gv isKindOfClass:[NSNull class]]) {
+            if(![gv isKindOfClass:[NSNull class]]) {
+                [gv setNeedsDisplay];
                 SAWGem *gem = [self.gems objectInRow:row column:col];
                 if ([gem isKindOfClass:[NSNull class]]) {
-                    NSLog(@"removing view (%ld,%ld)",row,col);
-                    [gv removeFromSuperview];
-                }  else {
-                    [gv setNeedsDisplay];
+                    [self.gems setObject:[[SAWGem alloc] init] inRow:row column:col];
                 }
             }
+            
         }
     }
 }
