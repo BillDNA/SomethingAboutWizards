@@ -34,6 +34,7 @@
 		F10322A61D57C5AC003676F5 /* SAWSpell.m in Sources */ = {isa = PBXBuildFile; fileRef = F10322A51D57C5AC003676F5 /* SAWSpell.m */; };
 		F158C84C1D3C32ED009EA0EC /* SAWCombatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F158C84B1D3C32ED009EA0EC /* SAWCombatViewController.m */; };
 		F1E1F84B1D57DF2400F266B2 /* UIImage+SAW.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E1F84A1D57DF2400F266B2 /* UIImage+SAW.m */; };
+		F1E1F84F1D58133A00F266B2 /* SAWScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E1F84E1D58133A00F266B2 /* SAWScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,8 @@
 		F158C84B1D3C32ED009EA0EC /* SAWCombatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWCombatViewController.m; sourceTree = "<group>"; };
 		F1E1F8491D57DF2400F266B2 /* UIImage+SAW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SAW.h"; sourceTree = "<group>"; };
 		F1E1F84A1D57DF2400F266B2 /* UIImage+SAW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SAW.m"; sourceTree = "<group>"; };
+		F1E1F84D1D58133900F266B2 /* SAWScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWScene.h; sourceTree = "<group>"; };
+		F1E1F84E1D58133A00F266B2 /* SAWScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +337,7 @@
 		A2DB0A491D2DEA7000886B96 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F1E1F84C1D5812B900F266B2 /* SAWScene */,
 				F10322A71D57C5E3003676F5 /* SAWSpell */,
 				A2943E621D57B15E00CD483C /* SAWGem */,
 				A2943E5A1D57AF9D00CD483C /* SAWSpellBook */,
@@ -435,6 +439,15 @@
 				F158C84B1D3C32ED009EA0EC /* SAWCombatViewController.m */,
 			);
 			name = SAWCombatViewController;
+			sourceTree = "<group>";
+		};
+		F1E1F84C1D5812B900F266B2 /* SAWScene */ = {
+			isa = PBXGroup;
+			children = (
+				F1E1F84D1D58133900F266B2 /* SAWScene.h */,
+				F1E1F84E1D58133A00F266B2 /* SAWScene.m */,
+			);
+			name = SAWScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -589,6 +602,7 @@
 				A2943E711D57E0B600CD483C /* SAWSpellPageView.m in Sources */,
 				A2B1D2DF1D3C00E300194A93 /* SAWGameViewController.m in Sources */,
 				A2B1D2E41D3C025F00194A93 /* SAWStoryViewController.m in Sources */,
+				F1E1F84F1D58133A00F266B2 /* SAWScene.m in Sources */,
 				A2DB0A581D2DEE4F00886B96 /* UIColor+SAW.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,10 +10,13 @@
 #import "SAWNotificationNames.h"
 #import "SAWEnums.h"
 #import "SAWSpell.h"
+#import "SAWHelpers.h"
 
 @interface SAWCombatViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *BackgroundImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *StoryView;
+@property (weak, nonatomic) IBOutlet UIImageView *CharacterView;
 @property (weak, nonatomic) IBOutlet UIImageView *AnimationView;
 
 
@@ -24,8 +27,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.BackgroundImageView setImage:[UIImage imageNamed: @"CombatBackground_1"]];
+    [self.BackgroundImageView setImage:[UIImage imageNamed: [NSString stringWithFormat:@"SceneBackground_%d",random_range(0,7)]]];
     
+    [self.CharacterView setImage:[UIImage imageNamed: [NSString stringWithFormat:@"knight_%d", random_range(0, 5)]]];
+
+    
+    //Listening for spell casts
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(spellCast:)
                                                  name:NOTE_SPELL_WAS_CAST
@@ -47,7 +54,7 @@
 
     [self.view layoutIfNeeded];
     
-    [UIView animateWithDuration:.6 delay:.4 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:.5 delay:.5 options:UIViewAnimationOptionCurveLinear animations:^{
         self.AnimationView.alpha = 0;
         [self.view layoutIfNeeded];
 
