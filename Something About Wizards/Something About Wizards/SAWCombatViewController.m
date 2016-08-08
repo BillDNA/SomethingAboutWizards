@@ -28,9 +28,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.BackgroundImageView setImage:[UIImage imageNamed: [NSString stringWithFormat:@"SceneBackground_%d",random_range(0,7)]]];
-    
+    [self.StoryView setImage:[UIImage imageNamed: @"story_bar"]];
     [self.CharacterView setImage:[UIImage imageNamed: [NSString stringWithFormat:@"knight_%d", random_range(0, 5)]]];
-
+    
     
     //Listening for spell casts
     [[NSNotificationCenter defaultCenter] addObserver:self
