@@ -126,12 +126,12 @@ const int64_t kDefaultTimeoutLengthInNanoSeconds = 10000000000; // 10 Seconds
                 NSInteger z = 0 - x - y;
                  SAWGem *gem = [self.gems objectAtX:x Y:y Z:z];
                  if ([gem isKindOfClass:[NSNull class]]) {
-                     CGRect xp = CGRectMake(x+1, y, z,0);
-                     CGRect xm = CGRectMake(x-1, y, z,0);
-                     CGRect yp = CGRectMake(x, y+1, z,0);
-                     CGRect ym = CGRectMake(x, y-1, z,0);
-                     CGRect zp = CGRectMake(x, y, z+1,0);
-                     CGRect zm = CGRectMake(x, y, z-1,0);
+                     CGRect xp = CGRectMake(x, y-1, z+1,0);
+                     CGRect xm = CGRectMake(x+1, y-1, z,0);
+                     CGRect yp = CGRectMake(x+1, y, z-1,0);
+                     CGRect ym = CGRectMake(x, y+1, z-1,0);
+                     CGRect zp = CGRectMake(x-1, y, z+1,0);
+                     CGRect zm = CGRectMake(x-1, y-1, z+2,0);
                      NSMutableArray *posiblSliders = [[NSMutableArray alloc] init];
                      NSArray *originalPosibilaties =@[[NSValue valueWithCGRect:xp],
                                                       [NSValue valueWithCGRect:xm],
@@ -142,17 +142,28 @@ const int64_t kDefaultTimeoutLengthInNanoSeconds = 10000000000; // 10 Seconds
                      
                      for (int i = 0; i < originalPosibilaties.count; i++ ) {
                          if (posiblSliders.count == 0) {
-                             [posiblSliders addObject:[originalPosibilaties objectAtIndex:i]];
+                             CGRect max = [[originalPosibilaties objectAtIndex:i] CGRectValue];
+                             if (max.origin.x + max.origin.y + max.size.width == 0) {
+                                 SAWGem *gemCheck = [self.gems objectAtX:max.origin.x Y:max.origin.y Z:max.size.width];
+                                 if (![gemCheck isKindOfClass:[NSNull class]]) {
+                                     [posiblSliders addObject:[originalPosibilaties objectAtIndex:i]];
+                                 }
+                             }
                          } else {
                              CGRect max = [[posiblSliders objectAtIndex:0] CGRectValue];
-                             NSInteger currentMaxDistance =  MAX(MAX(ABS(0 - max.origin.x), ABS(0 - max.origin.y)), ABS(0 - max.size.width));
-                             CGRect posible = [[originalPosibilaties objectAtIndex:i] CGRectValue];
-                             NSInteger posibleMaxDistance =  MAX(MAX(ABS(0 - posible.origin.x), ABS(0 - posible.origin.y)), ABS(0 - posible.size.width));
-                             if (posibleMaxDistance > currentMaxDistance) {
-                                 posiblSliders = [[NSMutableArray alloc] init];
-                                 [posiblSliders addObject:[originalPosibilaties objectAtIndex:i]];
-                             } else if (posibleMaxDistance == currentMaxDistance) {
-                                 [posiblSliders addObject:[originalPosibilaties objectAtIndex:i]];
+                             if (max.origin.x + max.origin.y + max.size.width == 0) {
+                                 NSInteger currentMaxDistance =  MAX(MAX(ABS(0 - max.origin.x), ABS(0 - max.origin.y)), ABS(0 - max.size.width));
+                                 CGRect posible = [[originalPosibilaties objectAtIndex:i] CGRectValue];
+                                 NSInteger posibleMaxDistance =  MAX(MAX(ABS(0 - posible.origin.x), ABS(0 - posible.origin.y)), ABS(0 - posible.size.width));
+                                 SAWGem *gemCheck = [self.gems objectAtX:posible.origin.x Y:posible.origin.y Z:posible.size.width];
+                                 if (![gemCheck isKindOfClass:[NSNull class]]) {
+                                     if (posibleMaxDistance > currentMaxDistance) {
+                                         posiblSliders = [[NSMutableArray alloc] init];
+                                         [posiblSliders addObject:[originalPosibilaties objectAtIndex:i]];
+                                     } else if (posibleMaxDistance == currentMaxDistance) {
+                                         [posiblSliders addObject:[originalPosibilaties objectAtIndex:i]];
+                                     }
+                                 }
                              }
                              
                          }
@@ -170,6 +181,9 @@ const int64_t kDefaultTimeoutLengthInNanoSeconds = 10000000000; // 10 Seconds
                               shouldDropInRando = YES;
                               break;
                           }
+                     }
+                     if (posiblSliders.count == 0) {
+                         NSLog(@"ok");
                      }
                      if (shouldDropInRando) {
                          [self.gems setObject:[[SAWGem alloc] init] AtX:x Y:y Z:z];

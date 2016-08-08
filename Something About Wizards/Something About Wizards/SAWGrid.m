@@ -38,7 +38,13 @@
     return self;
 }
 #pragma mark - getters
-- (id)objectInRow:(NSUInteger)row column:(NSUInteger)column {
+- (id)objectInRow:(NSInteger)row column:(NSInteger)column {
+    if (row < 0 || row >= self.rows.count) {
+        return [NSNull null];
+    }
+    if (column < 0 || column >= ((NSMutableArray *)[self.rows objectAtIndex:row]).count) {
+        return [NSNull null];
+    }
     return [[self.rows objectAtIndex:row] objectAtIndex:column];
 }
 -(id)objectAtX:(NSInteger)x Y:(NSInteger)y Z:(NSInteger)z {
@@ -46,7 +52,7 @@
     return  [self objectInRow:rc.x column:rc.y];
 }
 #pragma mark - setters
-- (void)setObject:(id)obj inRow:(NSUInteger)row column:(NSUInteger)column {
+- (void)setObject:(id)obj inRow:(NSInteger)row column:(NSInteger)column {
     [[self.rows objectAtIndex:row] replaceObjectAtIndex:column withObject:obj];
 }
 - (void)setObject:(id)obj AtX:(NSInteger)x Y:(NSInteger)y Z:(NSInteger)z {

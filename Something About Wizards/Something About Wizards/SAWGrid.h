@@ -15,9 +15,9 @@
 -(NSInteger)rowCount;
 -(NSInteger)colCount;
 
--(id)initWithRows:(NSUInteger)rows columns:(NSUInteger)columns;
--(id) objectInRow:(NSUInteger)row column:(NSUInteger)column;
-- (void)setObject:(id)obj inRow:(NSUInteger)row column:(NSUInteger)column;
+-(id)initWithRows:(NSInteger)rows columns:(NSInteger)columns;
+-(id) objectInRow:(NSInteger)row column:(NSInteger)column;
+- (void)setObject:(id)obj inRow:(NSInteger)row column:(NSInteger)column;
 -(id)objectAtX:(NSInteger)x Y:(NSInteger)y Z:(NSInteger)z;
 - (void)setObject:(id)obj AtX:(NSInteger)x Y:(NSInteger)y Z:(NSInteger)z;
 
